@@ -1,0 +1,7 @@
+GitHub: https://raw.githubusercontent.com/primer/octicons/main/icons/mark-github-16.svg
+License: octicons-LICENSE.txt (MIT)
+Reddit: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/reddit.svg
+X: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/x.svg
+Instagram: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg
+License: simple-icons-LICENSE.txt (CC0)
+Retrieved 2026-09-30. Original SVG files are included unchanged. Brand names and marks belong to their respective owners.
