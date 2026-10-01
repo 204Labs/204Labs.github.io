@@ -258,9 +258,9 @@ a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 .footer-links>a:hover{text-decoration:underline}
 .footer-links>[aria-disabled]{cursor:default;text-decoration:underline dotted;text-underline-offset:5px}
 @media(max-width:900px){.contact-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px}.social-links{gap:8px}.site-footer{gap:24px}.footer-brand img{width:170px}}
-@media(max-width:760px){.contact-grid{grid-template-columns:1fr}.contact-copy{justify-self:start}.site-footer{grid-template-columns:1fr 1fr;gap:36px}.footer-identity{grid-column:1 / -1}.site-footer>.legal{text-align:left;margin:0}.philosophy-content{min-height:540px}}
-@media(max-width:600px){.philosophy-content{min-height:470px}.philosophy-copy{max-width:31ch}.footer-brand img{width:180px}.site-footer{grid-template-columns:1fr;margin-top:64px}.site-footer>.legal{max-width:28ch}.footer-links{justify-self:start;align-items:flex-start}.copyright{font-size:.6875rem}}
-@media(max-width:360px){.site-footer{grid-template-columns:1fr}.footer-identity{grid-column:auto}.footer-links{justify-self:start}.social-links{gap:7px}.social-icon{width:44px;height:44px}}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}.contact-copy{justify-self:start}.site-footer{grid-template-columns:minmax(0,1fr) minmax(140px,.78fr);gap:28px 24px;align-items:start}.footer-identity{grid-column:1;grid-row:1}.site-footer>.legal{grid-column:1;grid-row:2;text-align:left;margin:0;max-width:28ch}.footer-links{grid-column:2;grid-row:1 / span 2;justify-self:start;align-items:flex-start}.philosophy-content{min-height:540px}}
+@media(max-width:600px){.philosophy-content{min-height:470px}.philosophy-copy{max-width:31ch}.footer-brand{padding:12px 0;margin-left:0}.footer-brand img{width:176px}.site-footer{grid-template-columns:minmax(0,1fr) minmax(126px,.72fr);gap:28px 20px;margin-top:64px}.footer-links>a,.footer-links>[role=link]{min-height:42px}.copyright{font-size:.6875rem}}
+@media(max-width:360px){.site-footer{grid-template-columns:minmax(0,1fr) minmax(112px,.62fr);gap:24px 14px}.footer-brand img{width:148px}.footer-links{font-size:.75rem}.footer-links>a,.footer-links>[role=link]{min-height:40px}.social-links{gap:7px}.social-icon{width:44px;height:44px}}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}
