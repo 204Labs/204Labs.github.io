@@ -91,6 +91,10 @@
   let frame = 0;
   let lastTime = 0;
   let visible = !('IntersectionObserver' in window);
+  let touchActive = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchMoved = false;
   const rest = { x: -.25, y: .4 };
   const angle = { ...rest };
   const target = { ...rest };
@@ -187,20 +191,31 @@
     start();
   };
   surface.addEventListener('pointermove', (event) => {
-    if (event.pointerType === 'touch') return;
+    if (event.pointerType === 'touch') {
+      if (!touchActive) return;
+      const dx = Math.abs(event.clientX - touchStartX);
+      const dy = Math.abs(event.clientY - touchStartY);
+      if (dx > 8 || dy > 8) touchMoved = true;
+      if (touchMoved && dx >= dy * .55) moveGlobe(event);
+      return;
+    }
     moveGlobe(event);
   }, { passive: true });
-  artwork.addEventListener('pointerdown', (event) => {
+  surface.addEventListener('pointerdown', (event) => {
     if (event.pointerType !== 'touch' || !allowed()) return;
-    artwork.setPointerCapture?.(event.pointerId);
+    touchActive = true;
+    touchMoved = false;
+    touchStartX = event.clientX;
+    touchStartY = event.clientY;
     moveGlobe(event);
   });
-  artwork.addEventListener('pointermove', (event) => {
-    if (event.pointerType !== 'touch') return;
-    moveGlobe(event);
-  });
-  artwork.addEventListener('pointerup', reset);
-  artwork.addEventListener('pointercancel', reset);
+  const endTouch = () => {
+    touchActive = false;
+    touchMoved = false;
+    reset();
+  };
+  surface.addEventListener('pointerup', (event) => { if (event.pointerType === 'touch') endTouch(); });
+  surface.addEventListener('pointercancel', (event) => { if (event.pointerType === 'touch') endTouch(); });
   surface.addEventListener('pointerleave', reset);
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([entry]) => {

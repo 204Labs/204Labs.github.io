@@ -222,7 +222,7 @@ html:not(.enhanced) .chapter-nav{display:none}
 @media(max-width:600px){.hero .eyebrow{max-width:100%}.echo-card{padding:26px}.echo-card-heading{flex-direction:column;align-items:start;gap:16px}.echo-card h3{font-size:1.625rem}}
 
 /* An original orbital globe, animated only in response to pointer movement. */
-.outlook-symbol{width:min(86vw,740px);height:auto;aspect-ratio:1;pointer-events:none}
+.outlook-symbol{width:min(86vw,740px);height:auto;aspect-ratio:1;pointer-events:auto}
 .outlook-canvas{position:absolute;inset:-8%;width:116%;height:116%;display:none}
 .outlook-ready .outlook-canvas{display:block}
 .outlook-ready.outlook-symbol{border-color:transparent}
@@ -245,7 +245,7 @@ html:not(.enhanced) .chapter-nav{display:none}
 a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 .social-icon svg,.social-icon img{width:24px;height:24px}
 .social-placeholder{border-style:dashed;cursor:default}
-.outlook-symbol{touch-action:none}
+.outlook-symbol{touch-action:pan-y}
 .site-footer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:36px;padding-top:44px}
 .footer-identity{min-width:0}
 .footer-brand{width:fit-content;padding:16px 20px;margin-left:-20px}
