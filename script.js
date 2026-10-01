@@ -2,13 +2,37 @@
   'use strict';
   const header = document.querySelector('.site-header');
   const menu = document.querySelector('.menu-toggle');
+  const themeToggle = document.querySelector('.theme-toggle');
   const navigation = document.querySelector('#primary-nav');
   const mobile = window.matchMedia('(max-width: 600px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const themeStorageKey = '204labs_theme';
 
   // Progressive enhancement: links are visible and usable when JavaScript is unavailable.
   document.documentElement.classList.add('enhanced');
   menu.hidden = false;
+  if (themeToggle) {
+    themeToggle.hidden = false;
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const setTheme = (theme, persist = true) => {
+      const nextTheme = theme === 'dark' ? 'dark' : 'light';
+      document.documentElement.dataset.theme = nextTheme;
+      themeMeta?.setAttribute('content', nextTheme === 'dark' ? '#101A2C' : '#23324A');
+      themeToggle.setAttribute('aria-label', nextTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      themeToggle.setAttribute('title', nextTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      themeToggle.querySelector('span').textContent = nextTheme === 'dark' ? '☼' : '◐';
+      if (!persist) return;
+      try {
+        window.localStorage.setItem(themeStorageKey, nextTheme);
+      } catch (_) {
+        // If storage is unavailable, the selected theme still applies for this page view.
+      }
+    };
+    setTheme(document.documentElement.dataset.theme, false);
+    themeToggle.addEventListener('click', () => {
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+    });
+  }
   const setMenu = (open, returnFocus = false) => {
     menu.setAttribute('aria-expanded', String(open));
     navigation.classList.toggle('is-open', open);

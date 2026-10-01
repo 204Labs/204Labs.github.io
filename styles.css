@@ -2,9 +2,10 @@
 @font-face{font-family:Inter;src:url("assets/fonts/inter.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
 
 /* Brand Book v1.2, page 6. SVG artwork retains its own original fills. */
-:root{--navy:#23324A;--cream:#F7F1E3;--coral:#F26B5E;--mustard:#F2B84B;--aqua:#49C5B6;--ink:var(--cream);--surface:var(--navy);--line:rgb(247 241 227 / .23);--gutter:clamp(24px,6.25vw,100px);--header-height:126px;--ease:cubic-bezier(.22,1,.36,1)}
+:root{--navy:#23324A;--navy-deep:#101A2C;--navy-soft:#182640;--cream:#F7F1E3;--cream-soft:#FBF6EA;--coral:#F26B5E;--mustard:#F2B84B;--aqua:#49C5B6;--ink:var(--cream);--surface:var(--navy);--line:rgb(247 241 227 / .23);--gutter:clamp(24px,6.25vw,100px);--header-height:126px;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:var(--header-height)}
+html{color-scheme:light dark}
 body{margin:0;background:var(--navy);color:var(--cream);font-family:Inter,Arial,sans-serif;font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--mustard);color:var(--navy)}
 a{color:inherit;text-decoration:none;text-underline-offset:6px}
@@ -22,6 +23,10 @@ button,a{touch-action:manipulation}
 .wrap{width:min(100%,1640px);padding-inline:var(--gutter);margin-inline:auto}
 .dark{--ink:var(--cream);--surface:var(--navy);--line:rgb(247 241 227 / .23);background:var(--surface);color:var(--ink)}
 .light{--ink:var(--navy);--surface:var(--cream);--line:rgb(35 50 74 / .25);background:var(--surface);color:var(--ink)}
+html[data-theme=dark] body{background:var(--navy-deep);color:var(--cream)}
+html[data-theme=dark] .dark{--surface:var(--navy-deep);--ink:var(--cream);--line:rgb(247 241 227 / .2)}
+html[data-theme=dark] .light{--surface:var(--navy-soft);--ink:var(--cream);--line:rgb(247 241 227 / .18)}
+html[data-theme=dark] .company,html[data-theme=dark] .contact{box-shadow:inset 0 1px 0 rgb(247 241 227 / .05)}
 .chapter{position:relative;scroll-margin-top:0}
 .eyebrow,.section-label,.scroll-cue,.review-footer{font-size:.75rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase}
 .section-label{display:flex;justify-content:space-between;gap:24px;max-width:none;border-top:1px solid var(--line);padding-top:22px;margin-bottom:clamp(60px,8vw,120px)}
@@ -41,6 +46,10 @@ button,a{touch-action:manipulation}
 .primary-nav a{font-size:.875rem;min-height:44px;display:flex;align-items:center;position:relative}
 .primary-nav a::after{content:"";position:absolute;bottom:6px;left:0;width:100%;height:1px;background:var(--coral);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
 .primary-nav a:hover::after,.primary-nav a:focus-visible::after{transform:scaleX(1)}
+.header-actions{display:flex;align-items:center;gap:10px;flex:none}
+.theme-toggle{width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;color:var(--cream);background:rgb(247 241 227 / .08);border:1px solid rgb(247 241 227 / .4);border-radius:4px;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s var(--ease)}
+.theme-toggle:hover{background:rgb(247 241 227 / .16);border-color:rgb(247 241 227 / .65);transform:translateY(-1px)}
+.theme-toggle span{font-size:1.05rem;line-height:1}
 .menu-toggle{display:none;color:var(--cream);background:transparent;border:1px solid rgb(247 241 227 / .4);min-height:44px;padding:0 16px;border-radius:4px;cursor:pointer}
 .menu-toggle span{display:inline-block;margin-left:16px;transition:transform .25s ease;font-size:1.25rem}
 .menu-toggle[aria-expanded=true] span{transform:rotate(45deg)}
@@ -81,6 +90,10 @@ h1>span{color:var(--coral)}
 .company-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:70px;align-items:start}
 .company h2{font-size:clamp(3rem,5.7vw,6rem)}
 .text-outline{-webkit-text-stroke:1.3px var(--navy);color:transparent}
+html[data-theme=dark] .text-outline{-webkit-text-stroke-color:rgb(247 241 227 / .72)}
+html[data-theme=dark] .button-primary{background:var(--cream);color:var(--navy)}
+html[data-theme=dark] .button-navy{background:var(--cream);color:var(--navy)}
+html[data-theme=dark] .button-navy:hover{background:var(--mustard);border-color:var(--mustard)}
 .company-copy{padding-top:8px;max-width:450px}
 .company-copy p+p{margin-top:24px}
 .lead{font-size:1.375rem;letter-spacing:-.025em;line-height:1.45}
@@ -172,7 +185,7 @@ h1>span{color:var(--coral)}
   :root{--header-height:96px}.site-header{padding:14px 24px;align-items:center;flex-wrap:wrap;background:var(--navy)}
   .site-header .brand{padding:10px 12px;background:var(--cream);border-radius:6px}.site-header .brand img{width:134px;height:auto}.brand picture{display:block}
   
-  .menu-toggle:not([hidden]){display:block;margin-left:auto}.primary-nav{width:100%;justify-content:space-between;margin:0;padding-top:8px}
+  .header-actions{margin-left:auto}.menu-toggle:not([hidden]){display:block}.primary-nav{order:3;width:100%;justify-content:space-between;margin:0;padding-top:8px}
   .enhanced .primary-nav{display:none}.enhanced .primary-nav.is-open{display:flex;padding-block:10px 8px}
   .primary-nav a{font-size:.875rem}.primary-nav{flex-wrap:wrap}.hero{min-height:760px;min-height:max(760px,100svh);padding-top:170px;padding-bottom:24px}
   .hero .eyebrow{max-width:29ch;line-height:1.8;margin-bottom:30px}.separator{padding-inline:7px}
@@ -245,6 +258,9 @@ html:not(.enhanced) .chapter-nav{display:none}
 a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 .social-icon svg,.social-icon img{width:24px;height:24px}
 .social-placeholder{border-style:dashed;cursor:default}
+html[data-theme=dark] .social-icon{border-color:rgb(247 241 227 / .72);color:var(--cream);background:rgb(247 241 227 / .03)}
+html[data-theme=dark] a.social-icon:hover{background:rgb(242 184 75 / .2)}
+html[data-theme=dark] .social-icon img{filter:invert(96%) sepia(10%) saturate(334%) hue-rotate(340deg) brightness(103%) contrast(93%)}
 .outlook-symbol{touch-action:pan-y}
 .site-footer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:36px;padding-top:44px}
 .footer-identity{min-width:0}
@@ -257,6 +273,7 @@ a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 .footer-links>a,.footer-links>[role=link]{min-height:44px;display:flex;align-items:center;gap:20px}
 .footer-links>a:hover{text-decoration:underline}
 .footer-links>[aria-disabled]{cursor:default;text-decoration:underline dotted;text-underline-offset:5px}
+html[data-theme=dark] .footer-brand{background:var(--cream);border-radius:6px}
 @media(max-width:900px){.contact-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px}.social-links{gap:8px}.site-footer{gap:24px}.footer-brand img{width:170px}}
 @media(max-width:760px){.contact-grid{grid-template-columns:1fr}.contact-copy{justify-self:start}.site-footer{grid-template-columns:minmax(0,1fr) minmax(140px,.78fr);gap:28px 24px;align-items:start}.footer-identity{grid-column:1;grid-row:1}.site-footer>.legal{grid-column:1;grid-row:2;text-align:left;margin:0;max-width:28ch}.footer-links{grid-column:2;grid-row:1 / span 2;justify-self:start;align-items:flex-start}.philosophy-content{min-height:540px}}
 @media(max-width:600px){.philosophy-content{min-height:470px}.philosophy-copy{max-width:31ch}.footer-brand{padding:12px 0;margin-left:0}.footer-brand img{width:176px}.site-footer{grid-template-columns:minmax(0,1fr) minmax(126px,.72fr);gap:28px 20px;margin-top:64px}.footer-links>a,.footer-links>[role=link]{min-height:42px}.copyright{font-size:.6875rem}}
@@ -392,6 +409,7 @@ a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 #portfolio summary::-webkit-details-marker{display:none}
 #portfolio summary::marker{content:""}
 #portfolio summary:focus-visible{outline:3px solid var(--navy);outline-offset:6px}
+html[data-theme=dark] #portfolio summary:focus-visible{outline-color:var(--aqua)}
 #portfolio summary h3{transition:transform .25s var(--ease)}
 #portfolio summary:hover h3{transform:translateX(5px)}
 #portfolio .product-status{font-size:.6875rem;letter-spacing:.08em;text-align:right;line-height:1.5;max-width:24ch}
