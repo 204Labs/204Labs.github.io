@@ -396,6 +396,19 @@ html[data-theme=dark] .footer-brand{background:var(--cream);border-radius:6px}
   #approach .echo-question{font-size:.6875rem}
   #approach .echo-person,#approach .echo-human-together{font-size:.8125rem}
   #approach .echo-optimism::after{width:2%;left:98%}
+  #approach.echo-mobile-pinned .echo-shell{padding-block:10px 14px}
+  #approach.echo-mobile-pinned .section-label{padding-top:8px;margin-bottom:12px}
+  #approach.echo-mobile-pinned .echo-toolbar{gap:12px;margin-bottom:12px}
+  #approach.echo-mobile-pinned .echo-toolbar>p{font-size:.75rem;line-height:1.45;max-width:38ch}
+  #approach.echo-mobile-pinned .echo-nav-letter{width:48px;height:52px;font-size:2rem}
+  #approach.echo-mobile-pinned .echo-stage{gap:8px;padding:12px 0 14px}
+  #approach.echo-mobile-pinned .echo-stage h3{font-size:2rem;margin-bottom:8px}
+  #approach.echo-mobile-pinned .echo-statement{font-size:.875rem}
+  #approach.echo-mobile-pinned .echo-art{max-width:min(285px,86vw);aspect-ratio:1.5}
+  #approach.echo-mobile-pinned .echo-glyph{font-size:11.5rem}
+  #approach.echo-mobile-pinned .echo-copy p{font-size:.8125rem;line-height:1.5;margin-top:8px}
+  #approach.echo-mobile-pinned .echo-controls{padding-top:8px}
+  #approach.echo-mobile-pinned .echo-controls button{min-height:38px}
 }
 @media(prefers-reduced-motion:reduce){#approach *,#approach *::before,#approach *::after{transition:none!important;animation:none!important}}
 @media(forced-colors:active){#approach .echo-nav-letter[aria-current]{border:2px solid ButtonText}#approach .echo-glyph{display:none}#approach .echo-question i{background:CanvasText}#approach .echo-node-map,#approach .echo-forward-map{stroke:CanvasText}}
