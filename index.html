@@ -4,6 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#23324A">
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('204labs_theme');
+        const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#101A2C' : '#23324A');
+      } catch (_) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
   <title>204Labs | Independent Software. Bringing Ideas to Life.</title>
   <meta name="description" content="204Labs builds independent, human-centred software. Explore Rewizz, bAIsect, Tether, Lurniq and FlatIntel, and the ideas behind our products.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -140,13 +153,16 @@
     <a class="brand" href="#home" aria-label="204Labs home">
       <img src="assets/brand/204Labs_Primary_Logo.svg" width="1605" height="545" alt="204Labs. Bringing Ideas to Life.">
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">+</span></button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
       <a href="#company">Company</a>
       <a href="#approach">Approach</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contact">Connect</a>
     </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden><span aria-hidden="true">◐</span></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">+</span></button>
+    </div>
   </header>
 
   <nav class="chapter-nav" aria-label="Page chapters">
