@@ -91,23 +91,34 @@
 }
 
 .cookie-settings-button {
-  min-height: 44px;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  cursor: pointer;
-  text-align: left;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: var(--coral);
-}
-
-.footer-links .cookie-settings-button,
-.policy-nav .cookie-settings-button {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 999;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(245, 239, 226, .35);
+  border-radius: 50%;
+  color: var(--cream);
+  background: var(--navy);
+  box-shadow: 0 12px 35px rgba(11, 21, 38, .24);
+  cursor: pointer;
+}
+
+.cookie-settings-button svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.cookie-settings-button:focus-visible {
+  outline: 3px solid var(--aqua);
+  outline-offset: 4px;
 }
 
 @media (max-width: 760px) {

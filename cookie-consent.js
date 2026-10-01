@@ -59,17 +59,15 @@
     banner.querySelector('[data-cookie-choice="analytics"]')?.focus({ preventScroll: true });
   };
 
-  const addSettingsLink = () => {
-    const targets = document.querySelectorAll('.footer-links, .policy-nav');
-    targets.forEach((target) => {
-      if (target.querySelector('.cookie-settings-button')) return;
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'cookie-settings-button';
-      button.textContent = 'Cookie Settings';
-      button.addEventListener('click', openBanner);
-      target.append(button);
-    });
+  const addSettingsButton = () => {
+    if (document.querySelector('.cookie-settings-button')) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'cookie-settings-button';
+    button.setAttribute('aria-label', 'Cookie settings');
+    button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"></circle><circle cx="9" cy="9" r="1"></circle><circle cx="14.5" cy="8.5" r="1"></circle><circle cx="15" cy="14" r="1"></circle><circle cx="9.5" cy="15" r="1"></circle></svg>';
+    button.addEventListener('click', openBanner);
+    document.body.append(button);
   };
 
   window.__204LabsCookieConsent = {
@@ -79,7 +77,7 @@
   };
 
   document.addEventListener('DOMContentLoaded', () => {
-    addSettingsLink();
+    addSettingsButton();
     const choice = getChoice();
     if (choice !== acceptedValue && choice !== declinedValue) {
       document.body.append(buildBanner());

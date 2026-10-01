@@ -1,6 +1,6 @@
 .policy-page{max-width:1100px;padding-block:32px 96px}
 .policy-header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:76px}
-.policy-header .brand{display:inline-flex;align-items:center;justify-content:center;margin:0}
+.policy-header .brand{display:inline-flex;align-items:center;justify-content:center;margin:0;background:var(--cream);padding:17px 19px;border-radius:6px}
 .policy-header .brand img{width:160px;height:auto}
 .policy-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px 26px}
 .policy-nav a,.policy-meta a,.policy-page section a{min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--coral)}
@@ -30,6 +30,7 @@
 @media(max-width:640px){
   .policy-page{padding-block:22px 64px}
   .policy-header{align-items:flex-start;flex-direction:column;margin-bottom:56px}
+  .policy-header .brand img{width:150px}
   .policy-nav{justify-content:flex-start;gap:6px 18px}
   .policy-meta{align-items:flex-start;flex-direction:column}
   .entity-details>div{grid-template-columns:1fr;gap:2px}
