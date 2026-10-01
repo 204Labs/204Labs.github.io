@@ -272,6 +272,7 @@
   const next = section.querySelector('.echo-next');
   const instruction = section.querySelector('.echo-instruction');
   const desktop = matchMedia('(min-width: 1000px) and (min-height: 780px)');
+  const mobileSequence = matchMedia('(max-width: 999px) and (min-height: 640px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const names = ['Experimentation', 'Curiosity with Purpose', 'Human', 'Optimism'];
   const read = [false, false, false, false];
@@ -417,20 +418,23 @@
     playFrame = 0;
     const headerHeight = document.querySelector('.site-header').getBoundingClientRect().height;
     top = headerHeight + 12;
-    const height = window.innerHeight - top - 12;
-    step = Math.max(864, height * 1.215);
+    const useMobileSequence = mobileSequence.matches && !desktop.matches;
+    const height = window.innerHeight - top - (useMobileSequence ? 8 : 12);
+    step = useMobileSequence ? Math.max(520, height * .92) : Math.max(864, height * 1.215);
     section.style.setProperty('--echo-top', `${top}px`);
     section.style.setProperty('--echo-pin-height', `${height}px`);
     section.style.setProperty('--echo-step', `${step}px`);
     const wasPinned = pinned;
     const largeText = parseFloat(getComputedStyle(document.documentElement).fontSize) > 22;
     section.classList.toggle('echo-large-text', largeText);
-    pinned = desktop.matches && !reduced.matches && !largeText;
+    pinned = (desktop.matches || useMobileSequence) && !reduced.matches && !largeText;
     section.classList.toggle('echo-pinned', pinned);
+    section.classList.toggle('echo-mobile-pinned', pinned && useMobileSequence);
     // At high text zoom or short viewports, use the sequential version instead of clipping.
-    if (pinned && shell.scrollHeight > height + 2) {
+    if (pinned && !useMobileSequence && shell.scrollHeight > height + 2) {
       pinned = false;
       section.classList.remove('echo-pinned');
+      section.classList.remove('echo-mobile-pinned');
     }
     // Reduce the actual toolbar-to-stage gap, including the flexible desktop space.
     section.style.setProperty('--echo-lift', '0px');
@@ -500,6 +504,7 @@
   window.addEventListener('resize', configure, { passive: true });
   reduced.addEventListener('change', configure);
   desktop.addEventListener('change', configure);
+  mobileSequence.addEventListener('change', configure);
   if (document.fonts) document.fonts.ready.then(configure);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) { cancelAnimationFrame(playFrame); playFrame = 0; }
