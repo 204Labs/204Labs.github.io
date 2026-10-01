@@ -177,16 +177,30 @@
   resize();
   if ('ResizeObserver' in window) new ResizeObserver(resize).observe(artwork);
   else window.addEventListener('resize', resize, { passive: true });
-  surface.addEventListener('pointermove', (event) => {
-    // Touch retains native vertical scrolling and a composed static illustration.
-    if (event.pointerType === 'touch' || !allowed()) return;
+  const moveGlobe = (event) => {
+    if (!allowed()) return;
     const box = surface.getBoundingClientRect();
     const x = Math.max(-1, Math.min(1, (event.clientX - box.left) / box.width * 2 - 1));
     const y = Math.max(-1, Math.min(1, (event.clientY - box.top) / box.height * 2 - 1));
     target.x = rest.x - y * .65;
     target.y = rest.y + x * 1.3;
     start();
+  };
+  surface.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    moveGlobe(event);
   }, { passive: true });
+  artwork.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'touch' || !allowed()) return;
+    artwork.setPointerCapture?.(event.pointerId);
+    moveGlobe(event);
+  });
+  artwork.addEventListener('pointermove', (event) => {
+    if (event.pointerType !== 'touch') return;
+    moveGlobe(event);
+  });
+  artwork.addEventListener('pointerup', reset);
+  artwork.addEventListener('pointercancel', reset);
   surface.addEventListener('pointerleave', reset);
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([entry]) => {
@@ -338,6 +352,22 @@
     };
     playFrame = requestAnimationFrame(play);
   };
+  const playStage = (index, duration = 1600) => {
+    cancelAnimationFrame(playFrame);
+    if (pinned || reduced.matches || read[index]) {
+      render(index, read[index] ? 1 : 0);
+      return;
+    }
+    const started = performance.now();
+    const play = (now) => {
+      if (index !== active || document.hidden || pinned) { playFrame = 0; return; }
+      const p = clamp((now - started) / duration);
+      render(index, p);
+      if (p < .86) playFrame = requestAnimationFrame(play);
+      else playFrame = 0;
+    };
+    playFrame = requestAnimationFrame(play);
+  };
   const configure = () => {
     if (configuring) return;
     configuring = true;
@@ -378,6 +408,7 @@
     else {
       activate(Math.max(0, active));
       render(active, reduced.matches || read[active] ? 1 : 0);
+      if (!wasPinned) playStage(active, 1800);
       if (wasPinned && wasInView) window.scrollTo({ top: window.scrollY + shell.getBoundingClientRect().top - top, behavior: 'instant' });
     }
     configuring = false;
@@ -402,22 +433,30 @@
     question.addEventListener('focus', discover);
   });
   letters.forEach((letter, index) => {
-    letter.addEventListener('click', () => select(index));
+    letter.addEventListener('click', () => { select(index); playStage(index, 1800); });
     letter.addEventListener('keydown', (event) => {
       const destinations = { ArrowRight: Math.min(3, index + 1), ArrowLeft: Math.max(0, index - 1), Home: 0, End: 3 };
       if (!(event.key in destinations)) return;
       event.preventDefault();
       select(destinations[event.key], true);
+      playStage(destinations[event.key], 1800);
     });
   });
-  previous.addEventListener('click', () => select(Math.max(0, active - 1), true));
+  previous.addEventListener('click', () => { const index = Math.max(0, active - 1); select(index, true); playStage(index, 1800); });
   next.addEventListener('click', () => {
-    if (active < 3) select(active + 1, true);
+    if (active < 3) { const index = active + 1; select(index, true); playStage(index, 1800); }
     else stages[3].querySelector('.echo-ending').click();
   });
   section.classList.add('echo-ready');
   activate(0);
   configure();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry], observer) => {
+      if (!entry.isIntersecting || pinned || reduced.matches) return;
+      playStage(active, 1800);
+      observer.disconnect();
+    }, { threshold: .35 }).observe(section);
+  }
   window.addEventListener('scroll', scheduleScroll, { passive: true });
   window.addEventListener('resize', configure, { passive: true });
   reduced.addEventListener('change', configure);

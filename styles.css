@@ -170,7 +170,7 @@ h1>span{color:var(--coral)}
 }
 @media(max-width:600px){
   :root{--header-height:96px}.site-header{padding:14px 24px;align-items:center;flex-wrap:wrap;background:var(--navy)}
-  .brand{padding:0;background:transparent;border-radius:0}.brand img{width:64px;height:64px}.brand picture{display:block}
+  .site-header .brand{padding:10px 12px;background:var(--cream);border-radius:6px}.site-header .brand img{width:134px;height:auto}.brand picture{display:block}
   
   .menu-toggle:not([hidden]){display:block;margin-left:auto}.primary-nav{width:100%;justify-content:space-between;margin:0;padding-top:8px}
   .enhanced .primary-nav{display:none}.enhanced .primary-nav.is-open{display:flex;padding-block:10px 8px}
@@ -189,7 +189,7 @@ h1>span{color:var(--coral)}
   .philosophy .section-label{margin-bottom:30px}.philosophy-content{padding-top:70px}.philosophy-content>.eyebrow{font-size:.625rem;margin-bottom:35px}
   .philosophy h2{font-size:clamp(1.875rem,8vw,3rem)}.philosophy-copy{max-width:28ch;font-size:.875rem}
   .outlook-symbol{width:420px;height:420px}.contact h2{font-size:clamp(2.7rem,9vw,3.5rem)}
-  .site-footer{align-items:center}.footer-brand{padding:16px}.footer-brand img{width:140px}.site-footer .text-link{font-size:.8125rem}
+  .site-footer{align-items:start}.footer-brand{padding:16px}.footer-brand img{width:140px}.site-footer .text-link{font-size:.8125rem}
   .review-footer{max-width:38ch;line-height:1.8}
 }
 @media(max-width:360px){.primary-nav a{flex-basis:calc(50% - 12px)}}
@@ -245,6 +245,7 @@ html:not(.enhanced) .chapter-nav{display:none}
 a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 .social-icon svg,.social-icon img{width:24px;height:24px}
 .social-placeholder{border-style:dashed;cursor:default}
+.outlook-symbol{touch-action:none}
 .site-footer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:36px;padding-top:44px}
 .footer-identity{min-width:0}
 .footer-brand{width:fit-content;padding:16px 20px;margin-left:-20px}
@@ -258,7 +259,7 @@ a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 .footer-links>[aria-disabled]{cursor:default;text-decoration:underline dotted;text-underline-offset:5px}
 @media(max-width:900px){.contact-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px}.social-links{gap:8px}.site-footer{gap:24px}.footer-brand img{width:170px}}
 @media(max-width:760px){.contact-grid{grid-template-columns:1fr}.contact-copy{justify-self:start}.site-footer{grid-template-columns:1fr 1fr;gap:36px}.footer-identity{grid-column:1 / -1}.site-footer>.legal{text-align:left;margin:0}.philosophy-content{min-height:540px}}
-@media(max-width:600px){.philosophy-content{min-height:470px}.philosophy-copy{max-width:31ch}.footer-brand img{width:180px}.site-footer{margin-top:64px}.copyright{font-size:.6875rem}}
+@media(max-width:600px){.philosophy-content{min-height:470px}.philosophy-copy{max-width:31ch}.footer-brand img{width:180px}.site-footer{grid-template-columns:1fr;margin-top:64px}.site-footer>.legal{max-width:28ch}.footer-links{justify-self:start;align-items:flex-start}.copyright{font-size:.6875rem}}
 @media(max-width:360px){.site-footer{grid-template-columns:1fr}.footer-identity{grid-column:auto}.footer-links{justify-self:start}.social-links{gap:7px}.social-icon{width:44px;height:44px}}
 
 @media(prefers-reduced-motion:reduce){
@@ -363,6 +364,8 @@ a.social-icon:hover{background:var(--mustard);transform:translateY(-3px)}
 }
 @media(max-width:600px){
   #approach .echo-toolbar{gap:22px}
+  #approach.echo-ready:not(.echo-pinned) .echo-toolbar{position:static;background:transparent;padding-block:0}
+  #approach .echo-toolbar>p{max-width:34ch;font-size:.875rem;line-height:1.65}
   #approach .echo-letter-nav{width:100%;justify-content:space-between;gap:8px}
   #approach .echo-nav-letter{width:54px;height:60px;font-size:2.3rem}
   #approach .echo-stage{grid-template-columns:1fr;grid-template-areas:"heading" "art" "explanation";gap:12px;padding:26px 0}

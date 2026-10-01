@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.204labs.com/</loc></url>
-  <url><loc>https://www.204labs.com/terms.html</loc></url>
-  <url><loc>https://www.204labs.com/privacy.html</loc></url>
-  <url><loc>https://www.204labs.com/cookie-policy.html</loc></url>
+  <url><loc>https://www.204labs.com/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/company/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/approach/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/products/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/products/rewizz/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/products/baisect/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/products/tether/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/products/lurniq/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/products/flatintel/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/notes/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://www.204labs.com/terms.html</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://www.204labs.com/privacy.html</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://www.204labs.com/cookie-policy.html</loc><lastmod>2026-09-30</lastmod></url>
 </urlset>

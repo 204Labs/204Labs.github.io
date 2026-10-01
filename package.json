@@ -1,0 +1,9 @@
+{
+  "name": "204labs-github-pages",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:seo": "node scripts/seo-regression-check.mjs"
+  }
+}

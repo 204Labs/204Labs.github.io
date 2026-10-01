@@ -2,7 +2,7 @@
 
 ![204Labs. Bringing Ideas to Life.](assets/brand/social-card.png)
 
-The official website for [204Labs](https://www.204labs.com), an independent software company based in the United Arab Emirates.
+The official website for [204Labs](https://www.204labs.com), an independent software company based in Sharjah, United Arab Emirates.
 
 We explore overlooked problems, experiment with ideas, and build useful, human-centred software.
 
