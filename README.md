@@ -20,4 +20,4 @@ Static HTML, CSS and JavaScript, hosted on GitHub Pages. No build step or framew
 
 Brand assets belong to 204Labs. Third-party font and icon license notices are included alongside their files.
 
-[Website](https://www.204labs.com) · [Email](mailto:204LabsHQ@gmail.com)
+[Website](https://www.204labs.com) · [Email](mailto:connect@204labs.com)
