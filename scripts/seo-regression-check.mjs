@@ -1,23 +1,23 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const root = process.cwd();
 const productionOrigin = 'https://www.204labs.com';
+const products = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/products.json'), 'utf8'));
 const requiredPaths = [
   '/',
   '/company/',
   '/approach/',
   '/products/',
-  '/products/rewizz/',
-  '/products/baisect/',
-  '/products/tether/',
-  '/products/lurniq/',
-  '/products/flatintel/',
-  '/notes/',
+  ...products.map((product) => `/products/${product.slug}/`),
   '/terms.html',
   '/privacy.html',
   '/cookie-policy.html'
 ];
+// Draft or placeholder wording that must never reach a published page.
+const bannedPhrases = ['placeholder', 'not supplied', 'site-supported', 'crawlable', 'lorem ipsum', 'at a high level', 'public description', 'preview only'];
+const expectedNav = ['Products', 'Company', 'Approach', 'Connect'];
 const requiredBots = [
   'Googlebot',
   'Bingbot',
@@ -81,6 +81,19 @@ for (const requiredPath of requiredPaths) {
 for (const file of htmlFiles) {
   const html = read(file);
   const route = routeForFile(file);
+  // Retired addresses are kept as redirect pages; they only need a working target.
+  const redirect = html.match(/<body data-redirect="([^"]+)"/)?.[1];
+  if (redirect) {
+    if (!fs.existsSync(path.join(root, fileForRoute(redirect)))) fail(`${file}: redirect target ${redirect} does not exist`);
+    continue;
+  }
+  const visible = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<!--[\s\S]*?-->/g, ' ').replace(/\s(?:placeholder|autocomplete)="[^"]*"/gi, ' ').toLowerCase();
+  for (const phrase of bannedPhrases) if (visible.includes(phrase)) fail(`${file}: contains draft wording "${phrase}"`);
+  const nav = html.match(/<nav[^>]*aria-label="Main navigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  if (file !== '404.html') {
+    const labels = nav ? [...nav.matchAll(/>([^<>]+)<\/a>/g)].map((match) => match[1].trim()) : [];
+    if (labels.join('|') !== expectedNav.join('|')) fail(`${file}: main navigation should be ${expectedNav.join(', ')} (found ${labels.join(', ') || 'none'})`);
+  }
   const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   if (!title) fail(`${file}: missing title`);
   else if (title.length > 70) fail(`${file}: title is longer than 70 characters`);
@@ -117,6 +130,27 @@ for (const file of htmlFiles) {
     const targetFile = fileForRoute(routeTarget);
     if (!fs.existsSync(path.join(root, targetFile))) fail(`${file}: broken internal link or asset ${href}`);
   }
+}
+
+// Every product must appear on the homepage and have its own page.
+const homepage = read('index.html');
+for (const product of products) {
+  if (!homepage.includes(`id="product-${product.slug}"`)) fail(`index.html: product ${product.name} is missing. Run npm run build.`);
+  if (!routes.has(`/products/${product.slug}/`)) fail(`products/${product.slug}/: page is missing. Run npm run build.`);
+}
+
+// ECHO is locked. Its script and styles must match the recorded fingerprints;
+// after an intended ECHO change, update data/echo-lock.json in the same commit.
+{
+  const digest = (text) => crypto.createHash('sha256').update(text).digest('hex').slice(0, 16);
+  const script = read('script.js');
+  const styles = read('styles.css');
+  const echoScript = script.slice(script.indexOf('// ECHO: progressive enhancement'));
+  const echoStyles = styles.slice(styles.indexOf('/* ECHO only:'), styles.indexOf('/* Portfolio disclosures'));
+  const lock = JSON.parse(read('data/echo-lock.json'));
+  if (!echoScript.startsWith('// ECHO') || echoStyles.length < 1000) fail('ECHO script or styles could not be located');
+  if (digest(echoScript) !== lock.script) fail(`script.js: ECHO script changed (fingerprint ${digest(echoScript)}, locked ${lock.script})`);
+  if (digest(echoStyles) !== lock.styles) fail(`styles.css: ECHO styles changed (fingerprint ${digest(echoStyles)}, locked ${lock.styles})`);
 }
 
 const sitemap = read('sitemap.xml');

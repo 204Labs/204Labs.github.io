@@ -1,0 +1,16 @@
+# 204Labs
+
+> 204Labs FZE is an independent software company based in the United Arab Emirates. It builds and owns 4 software products.
+
+## Products
+
+- [Rewizz](https://www.204labs.com/products/rewizz/): Helping teachers get their time back. Status: Private beta. Website: https://rewizzapp.github.io/rewizzapp/
+- [bAIsect](https://www.204labs.com/products/baisect/): For when building with AI gets you almost there. Status: In development. Website: https://www.baisect.com/
+- [Sevaya.lk](https://www.204labs.com/products/sevaya/): Answers from official sources, with the source beside every one. Status: Launching soon. Website: https://www.sevaya.lk
+- [FlatIntel](https://www.204labs.com/products/flatintel/): Know more before you sign the lease. Status: In development.
+
+## Company
+
+- [Company](https://www.204labs.com/company/): legal entity and contact details
+- [Approach](https://www.204labs.com/approach/): ECHO, the four principles behind how 204Labs works
+- Contact: connect@204labs.com

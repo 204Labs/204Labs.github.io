@@ -51,6 +51,8 @@
   text-decoration: underline;
   text-decoration-color: var(--coral);
   text-underline-offset: 4px;
+  display: inline-block;
+  padding-block: 10px;
 }
 
 .cookie-consent__actions {
@@ -123,9 +125,32 @@
 
 @media (max-width: 760px) {
   .cookie-consent {
+    left: max(10px, env(safe-area-inset-left));
+    right: max(10px, env(safe-area-inset-right));
+    bottom: max(10px, env(safe-area-inset-bottom));
     grid-template-columns: 1fr;
     align-items: start;
-    padding: 18px;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .cookie-consent__eyebrow {
+    display: none;
+  }
+
+  .cookie-consent__title {
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .cookie-consent__copy {
+    font-size: .8125rem;
+    line-height: 1.5;
+  }
+
+  .cookie-consent__copy a {
+    display: inline-block;
+    padding-block: 6px;
   }
 
   .cookie-consent__actions {
@@ -133,6 +158,6 @@
   }
 
   .cookie-consent__button {
-    flex: 1 1 160px;
+    flex: 1 1 130px;
   }
 }

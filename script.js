@@ -20,7 +20,6 @@
       themeMeta?.setAttribute('content', nextTheme === 'dark' ? '#101A2C' : '#23324A');
       themeToggle.setAttribute('aria-label', nextTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
       themeToggle.setAttribute('title', nextTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-      themeToggle.querySelector('span').textContent = nextTheme === 'dark' ? '☼' : '◐';
       if (!persist) return;
       try {
         window.localStorage.setItem(themeStorageKey, nextTheme);
@@ -339,7 +338,7 @@
       else letters[i].removeAttribute('aria-current');
     });
     previous.disabled = index === 0;
-    next.textContent = index === 3 ? 'Continue to portfolio ↓' : `Next: ${names[index + 1]} →`;
+    next.textContent = index === 3 ? 'Continue ↓' : `Next: ${names[index + 1]} →`;
     if (moveFocus) letters[index].focus({ preventScroll: true });
   };
   const updateScroll = () => {

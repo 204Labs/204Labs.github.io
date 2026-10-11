@@ -35,3 +35,7 @@
   .policy-meta{align-items:flex-start;flex-direction:column}
   .entity-details>div{grid-template-columns:1fr;gap:2px}
 }
+.policy-footer{max-width:1100px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;padding-block:32px 48px;border-top:1px solid var(--line);font-size:.875rem}
+.policy-footer nav{display:flex;flex-wrap:wrap;gap:4px 24px}
+.policy-footer a{min-height:44px;display:inline-flex;align-items:center}
+.policy-footer a:hover{text-decoration:underline}

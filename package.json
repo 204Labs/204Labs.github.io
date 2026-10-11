@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test:seo": "node scripts/seo-regression-check.mjs"
+    "test:seo": "node scripts/seo-regression-check.mjs",
+    "build": "node scripts/build.mjs"
   }
 }

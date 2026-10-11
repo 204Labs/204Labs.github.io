@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "rewizz",
+    "name": "Rewizz",
+    "status": "Private beta",
+    "tagline": "Helping teachers get their time back.",
+    "summary": "Teachers already have the material. Rewizz turns existing lesson content into revision packs. By default your material stays on your own computer.",
+    "headline": "Rewizz helps teachers get their time back.",
+    "metaDescription": "Rewizz is a private-beta 204Labs product that helps teachers turn existing curriculum and lesson content into revision packs.",
+    "category": "EducationalApplication",
+    "website": {
+      "label": "Visit Rewizz",
+      "url": "https://rewizzapp.github.io/rewizzapp/",
+      "display": "rewizzapp.github.io/rewizzapp"
+    },
+    "action": {
+      "label": "Join other beta testers",
+      "email": "rewizz.beta@gmail.com",
+      "subject": "Rewizz beta access"
+    },
+    "sections": [
+      {
+        "title": "Who it is for",
+        "body": [
+          "Teachers who already have lesson material and want revision packs without rebuilding everything from scratch."
+        ]
+      },
+      {
+        "title": "How it works",
+        "body": [
+          "Choose existing curriculum or lesson content, review what is selected, adjust it and export the result."
+        ]
+      },
+      {
+        "title": "Privacy and control",
+        "body": [
+          "By default your material stays on your own computer. You decide what is selected, changed and exported."
+        ]
+      },
+      {
+        "title": "Joining the beta",
+        "body": [
+          "Rewizz is in private beta. Use the link above to ask for access by email."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "baisect",
+    "name": "bAIsect",
+    "status": "In development",
+    "tagline": "For when building with AI gets you almost there.",
+    "summary": "AI gets you most of the way, then the problem turns stubborn. bAIsect turns it into a structured issue report and connects you with engineers who can fix or finish it.",
+    "headline": "bAIsect is for when building with AI gets you almost there.",
+    "metaDescription": "bAIsect is a 204Labs product in development that turns a stubborn AI-build problem into a structured issue report and connects builders with engineers.",
+    "category": "DeveloperApplication",
+    "website": {
+      "label": "Visit bAIsect",
+      "url": "https://www.baisect.com/",
+      "display": "baisect.com"
+    },
+    "action": {
+      "label": "Join the waitlist",
+      "url": "https://www.baisect.com/#waitlist"
+    },
+    "sections": [
+      {
+        "title": "Who it is for",
+        "body": [
+          "Builders using AI who have reached a problem that needs clearer diagnosis, structure or an engineer's help."
+        ]
+      },
+      {
+        "title": "How it works",
+        "body": [
+          "bAIsect turns your messy problem into a structured issue report, then helps connect you with engineers equipped to diagnose, fix, finish or improve the work."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "sevaya",
+    "name": "Sevaya.lk",
+    "status": "Launching soon",
+    "tagline": "Answers from official sources, with the source beside every one.",
+    "summary": "Sri Lankan public information in plain language: guides, jobs, exams and tenders, in Sinhala, Tamil and English. Sevaya.lk is independent and is not a government website.",
+    "headline": "Sevaya.lk gives answers from official sources, with the source beside every one.",
+    "metaDescription": "Sevaya.lk is a 204Labs product that presents Sri Lankan public information in plain language, with the official source shown beside every answer.",
+    "category": "ReferenceApplication",
+    "website": {
+      "label": "Visit Sevaya.lk",
+      "url": "https://www.sevaya.lk",
+      "display": "sevaya.lk"
+    },
+    "action": {
+      "label": "Get notified at launch",
+      "url": "https://www.sevaya.lk"
+    },
+    "sections": [
+      {
+        "title": "Who it is for",
+        "body": [
+          "People looking for information on Sri Lankan public services, job vacancies, exams and tenders."
+        ]
+      },
+      {
+        "title": "How it works",
+        "body": [
+          "Answers are drawn from identified government and public-authority sources, and every answer shows its source. The service is available in Sinhala, Tamil and English."
+        ]
+      },
+      {
+        "title": "Independence",
+        "body": [
+          "Sevaya.lk is an independent service. It is not a government website and is not operated by the Government of Sri Lanka."
+        ]
+      },
+      {
+        "title": "Launch",
+        "body": [
+          "Sevaya.lk opens to the public soon. Sign up on the site to be notified at launch."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "flatintel",
+    "name": "FlatIntel",
+    "status": "In development",
+    "tagline": "Know more before you sign the lease.",
+    "summary": "Renters usually learn what a building is like after moving in. FlatIntel turns verified tenant experience into building-level insight, and gives owners a fair way to respond.",
+    "headline": "FlatIntel helps renters know more before signing the lease.",
+    "metaDescription": "FlatIntel is a 204Labs product in development that turns verified tenant experience into building-level insight for renters.",
+    "category": "LifestyleApplication",
+    "sections": [
+      {
+        "title": "Who it is for",
+        "body": [
+          "Renters who want building-level insight before committing to a lease."
+        ]
+      },
+      {
+        "title": "How it works",
+        "body": [
+          "FlatIntel is being built to turn verified tenant experience into structured, building-level insight. Owners and property managers get a fair way to respond, explain and show what has improved."
+        ]
+      },
+      {
+        "title": "Availability",
+        "body": [
+          "FlatIntel is being built and is not yet open to the public."
+        ]
+      }
+    ]
+  }
+]
