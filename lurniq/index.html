@@ -326,6 +326,118 @@
       .phone {width:min(100%,280px)}
       .hero-visual {height:580px}
     }
+
+  /* Lurniq preview screens: visually faithful HTML representations of supplied designs. */
+  .ds-showcase{width:100%;margin:46px 0 0;position:relative;min-width:0}
+  .ds-scroll{display:flex;align-items:flex-start;justify-content:center;gap:clamp(18px,2.6vw,39px);padding:15px 0 24px}
+  .ds-slide{width:min(31%,304px);min-width:0;flex:0 1 304px;position:relative;--rust:#B75642;--slate:#5D6572}
+  .ds-calendar{order:1;transform:translateY(18px) rotate(-3deg)}
+  .ds-home{order:2;transform:translateY(-10px);z-index:1}
+  .ds-message{order:3;transform:translateY(18px) rotate(3deg)}
+  .ds-phone{width:100%;aspect-ratio:570/1200;padding:7px;background:#252526;border-radius:37px;box-shadow:0 17px 30px rgba(51,40,35,.14)}
+  .ds-screen{position:relative;width:100%;height:100%;border-radius:31px;overflow:hidden;background:#fff;font-family:"DM Sans",sans-serif;text-align:left;color:#2D2D2D}
+  .ds-status{height:27px;background:var(--rust);color:#fff;display:flex;align-items:flex-start;justify-content:space-between;padding:6px 15px 0;font-size:10px;font-weight:600;line-height:1}
+  .ds-status-icons{font-size:10px;letter-spacing:2px}
+  .ds-heading{height:62px;background:var(--rust);color:#fff;display:flex;align-items:center;justify-content:center;position:relative;padding:0 23px 9px;font-size:25px;line-height:1.12}
+  .ds-heading strong{font-weight:600;letter-spacing:-.045em}
+  .ds-heading-action{position:absolute;right:18px;top:17px;display:grid;place-items:center}
+  .ds-heading-action svg,.ds-back svg{width:21px;height:21px}
+  .ds-back{position:absolute;left:17px;top:17px;display:grid;place-items:center}
+  .ds-content{height:calc(100% - 143px);padding:15px 12px 16px;overflow:hidden;background:#fff}
+  .ds-scope{font-size:11px;color:#626975;margin:0 0 31px;white-space:nowrap}
+  .ds-scope b{font-weight:700;color:#505560}
+  .ds-section-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}
+  .ds-section-title strong{font-size:18px;line-height:1.25;font-weight:700;letter-spacing:-.04em}
+  .ds-section-title strong span{font-weight:500;color:#626975}
+  .ds-section-title a{font-size:11px;color:#B75642;text-decoration:none}
+  .ds-task-stack{display:grid;gap:7px}
+  .ds-task{position:relative;display:flex;align-items:center;gap:10px;min-height:55px;padding:8px 9px 8px 23px;border:2px solid #D8282D;border-radius:15px;line-height:1.35}
+  .ds-task-stripe{position:absolute;left:7px;top:10px;bottom:10px;width:4px;border-radius:5px}
+  .ds-task-stripe.amber{background:#A77815}.ds-task-stripe.green{background:#347D4E}.ds-task-stripe.blue{background:#2964CA}
+  .ds-task>div{min-width:0;flex:1}.ds-task strong,.ds-schedule strong{display:block;font-size:11.5px;font-weight:600;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ds-task small,.ds-schedule small{display:block;font-size:10px;line-height:1.42;color:#606975;margin-top:3px;white-space:nowrap}
+  .ds-task em,.ds-schedule em{font-style:normal;color:#DE292A}
+  .ds-task-amount{font-size:10px;white-space:nowrap;align-self:flex-start}
+  .ds-schedule-heading{margin-top:41px;margin-bottom:18px}
+  .ds-schedule-stack{border:1px solid #E9E3DD;border-radius:13px;overflow:hidden}
+  .ds-schedule{display:flex;align-items:center;gap:8px;padding:6px 8px;min-height:52px;border-bottom:1px solid #E4E0DD;background:#fff;overflow:hidden}
+  .ds-schedule:last-child{border:0}
+  .ds-time{display:grid;place-items:center;flex:0 0 65px;min-height:45px;padding:6px 2px;background:#E4EAF3;border-radius:9px;font-size:11px;white-space:nowrap;color:#343435}
+  .ds-time.mint{background:#E1F0E5}.ds-time.cream{background:#FDF0E0}.ds-time.blue{background:#E4EAF3}.ds-time.neutral{background:#FCFAF8;border:1px solid #E7E1DA}
+  .ds-schedule>span:last-child{min-width:0;flex:1}
+  .ds-bottom{height:54px;position:absolute;left:0;right:0;bottom:0;background:#FFFDFC;border-top:1px solid #E5E1DD;display:grid;grid-template-columns:repeat(5,1fr);padding:4px 3px 5px;gap:0}
+  .ds-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:11px;color:#586273}
+  .ds-tab.ds-active{background:#FBDCCF;color:#343435}
+  .ds-tab svg{width:19px;height:19px;display:block}.ds-tab small{font-size:9px;line-height:1.2}
+  .ds-filter{position:absolute;right:9px;bottom:63px;width:37px;height:37px;border-radius:50%;background:#B75642;box-shadow:0 4px 9px rgba(81,44,29,.14);color:white;display:grid;place-items:center;font-size:20px}
+  .ds-calendar .ds-heading{font-size:23px}
+  .ds-calendar-content{padding-top:17px}
+  .ds-calendar .ds-scope{margin-bottom:24px}
+  .ds-week-tools{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}
+  .ds-segment{display:flex;gap:0;border-radius:14px;padding:4px;background:#FCF5F1;font-size:11px}
+  .ds-segment span{padding:10px 18px;border-radius:11px;color:#656976}
+  .ds-segment span.on{background:#FBDCCF;color:#343434}
+  .ds-chevrons{font-size:24px;line-height:1;color:#242424;font-weight:500;word-spacing:7px;padding-right:8px}
+  .ds-dates{display:grid;grid-template-columns:repeat(7,1fr);align-items:stretch;background:#FBF6F3;border-radius:14px;padding:5px;gap:0;margin-bottom:18px}
+  .ds-dates span{height:63px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;position:relative;font-size:12px;color:#606773}
+  .ds-dates b{font-weight:500}.ds-dates small{font-size:11px;color:#404044}
+  .ds-dates span.chosen{background:#B75642;border-radius:11px;color:#fff}.ds-dates span.chosen small{color:#fff}
+  .ds-dates i{position:absolute;width:4px;height:4px;background:#B75642;border-radius:50%;bottom:6px}
+  .ds-dates .chosen i{background:#fff}
+  .ds-day-title{font-size:16px;font-weight:700;line-height:1.25;letter-spacing:-.03em;margin:20px 0 10px;white-space:nowrap}
+  .ds-calendar .ds-schedule{border:1px solid #E9E3DD;border-radius:13px;margin-bottom:6px;min-height:54px;padding:5px 6px}
+  .ds-calendar .ds-time{flex-basis:59px;min-height:43px}
+  .ds-clash{display:flex;align-items:center;gap:10px;background:#E5ECF6;border-radius:13px;padding:12px 10px;margin:7px 0;font-size:11px;line-height:1.43;color:#343437}
+  .ds-clash b{flex:0 0 18px;color:#2368CB;font-size:17px;line-height:1}
+  .ds-source-content{padding:17px 12px 15px}
+  .ds-source-link{display:block;color:#1C61C3;font-size:10px;margin:0 0 16px;text-decoration:none;white-space:nowrap}
+  .ds-source-message{padding:16px 13px;border:1px solid #E2DEDA;border-radius:14px;background:#FCFAF9;font-size:12px;line-height:1.44}
+  .ds-source-message p{margin:0 0 6px}.ds-source-message p:last-child{margin:0}
+  .ds-source-note{font-size:11px;line-height:1.5;color:#6C7380;margin:16px 0 0}
+  .ds-caption{text-align:center;margin:13px 0 0;font-size:13px;color:#62616A;line-height:1.45}
+  .ds-caption strong{display:block;color:#333;font-size:15px;font-weight:700}
+  .ds-caption span{display:block}
+  .ds-controls{display:none;align-items:center;justify-content:center;gap:23px}
+  .ds-arrow{display:grid;place-items:center;border:1px solid #D7C6BC;background:#FFF9F5;color:#9B503D;width:39px;height:39px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer}
+  .ds-arrow:disabled{opacity:.35;cursor:default}
+  .ds-dots{display:flex;align-items:center;gap:10px}
+  .ds-dot{border:0;background:#D1B8A9;width:9px;height:9px;border-radius:50%;padding:0;cursor:pointer}
+  .ds-dot.active{width:22px;border-radius:8px;background:#B45843}
+  .ds-swipe-instruction,.ds-disclaimer{font-size:12px;text-align:center;color:#77716C;margin:12px 0 0}
+  .ds-swipe-instruction{display:none}
+  .ds-disclaimer{margin-top:18px}
+  @media(max-width:980px){
+    .ds-scroll{gap:12px}
+    .ds-slide{flex-basis:290px}
+    .ds-phone{padding:6px;border-radius:32px}
+    .ds-screen{border-radius:27px}
+    .ds-heading{font-size:22px}
+    .ds-content{padding-left:9px;padding-right:9px}
+    .ds-task strong,.ds-schedule strong{font-size:10.5px}
+    .ds-task small,.ds-schedule small{font-size:9px}
+  }
+  @media(max-width:740px){
+    .ds-showcase{width:calc(100% + 2 * var(--edge));margin-left:calc(-1 * var(--edge));margin-right:calc(-1 * var(--edge));margin-top:25px;overflow:hidden}
+    .ds-scroll{position:relative;display:flex;gap:16px;align-items:flex-start;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:calc((100vw - min(78vw,310px)) / 2);padding:5px calc((100vw - min(78vw,310px)) / 2) 13px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;touch-action:pan-x pan-y}
+    .ds-scroll::-webkit-scrollbar{display:none}
+    .ds-slide{width:min(78vw,310px);flex:0 0 min(78vw,310px);max-width:none;transform:none;order:initial;scroll-snap-align:center;scroll-snap-stop:always}
+    .ds-phone{width:100%;padding:7px;border-radius:38px}
+    .ds-screen{border-radius:31px}
+    .ds-heading{font-size:24px}
+    .ds-content{padding-left:12px;padding-right:12px}
+    .ds-task strong,.ds-schedule strong{font-size:11.5px}
+    .ds-task small,.ds-schedule small{font-size:10px}
+    .ds-controls{display:flex;margin-top:5px}
+    .ds-swipe-instruction{display:block}
+    .ds-disclaimer{font-size:11px;padding:0 28px}
+  }
+  @media(max-width:380px){
+    .ds-heading{font-size:22px}.ds-section-title strong{font-size:16px}
+    .ds-task strong,.ds-schedule strong{font-size:10.5px}
+    .ds-task small,.ds-schedule small{font-size:9px}
+    .ds-schedule-heading{margin-top:25px}
+  }
+  @media(prefers-reduced-motion:reduce){.ds-scroll{scroll-behavior:auto}}
   </style>
 </head>
 <body>
@@ -362,50 +474,71 @@
           </div>
           <p class="release-note"><span class="dot" aria-hidden="true"></span>Coming to Android and iOS. Early access requests open your email app.</p>
         </div>
-        <div class="hero-visual">
-          <div class="floating-note note-one" aria-hidden="true"><span class="note-date">From school inbox</span><strong>Trip form needs signing</strong><small>Due Thursday</small></div>
-          <div class="floating-note note-two" aria-hidden="true"><span class="note-date">School calendar</span><strong>Sports day moved</strong><small>Now Friday, 9:00 am</small></div>
-          <div class="phone" role="img" aria-label="Illustrative preview of a Lurniq home screen showing an example day for two children, including tasks and school activities.">
-            <div class="phone-screen">
-              <div class="phone-top">
-                <div class="phone-status"><span>9:41</span>
-                  <svg viewBox="0 0 54 14" fill="currentColor" aria-hidden="true"><rect x="0" y="8" width="4" height="6" rx="1"/><rect x="6" y="5" width="4" height="9" rx="1"/><rect x="12" y="2" width="4" height="12" rx="1"/><path d="M27 5c4-4 10-4 14 0l-7 8z"/><rect x="45" y="2" width="7" height="11" rx="2"/></svg>
-                </div>
-                <p class="phone-greeting">Good morning <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></p>
-                <p class="phone-date">Wednesday, 11 November</p>
-                <div class="phone-kids"><span>All children</span><span>Maya</span><span>Adam</span></div>
-              </div>
-              <div class="phone-body">
-                <p class="phone-section-title">Needs attention <span>2 items</span></p>
-                <div class="phone-event">
-                  <span class="tick"><svg viewBox="0 0 24 24"><path d="M8 3h8l4 4v14H4V3h4m8 0v5h4M8 13h8m-8 4h5"/></svg></span>
-                  <div><strong>Return trip consent form</strong><small>Adam · Due Thursday</small></div><span class="event-end">To do</span>
-                </div>
-                <div class="phone-event">
-                  <span class="tick"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zm0 4h16M7 15h4"/></svg></span>
-                  <div><strong>Art workshop fees</strong><small>Maya · AED 80 · Due Friday</small></div>
-                </div>
-                <div class="phone-next">
-                  <p class="phone-section-title">Coming up <span>This week</span></p>
-                  <div class="phone-event">
-                    <span class="tick"><svg viewBox="0 0 24 24"><path d="M7 3v4m10-4v4M4 10h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1z"/></svg></span>
-                    <div><strong>Swimming lesson</strong><small>Maya · Today, 4:00 pm</small></div>
-                  </div>
-                  <div class="phone-event">
-                    <span class="tick"><svg viewBox="0 0 24 24"><path d="M5 20V5l7-2 7 2v15M3 20h18M9 9h6m-6 4h6"/></svg></span>
-                    <div><strong>International Day</strong><small>Adam · Friday · School calendar</small></div>
-                  </div>
-                </div>
-              </div>
-              <div class="phone-bottom">
-                <span><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10h-6v-7H9v7H3z"/></svg>Home</span>
-                <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg>Calendar</span>
-                <span><svg viewBox="0 0 24 24"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-2M3 12l1 1 2-2M3 19l1 1 2-2"/></svg>Tasks</span>
-                <span><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>More</span>
-              </div>
-            </div>
+
+        <div class="ds-showcase" aria-label="Lurniq app preview screens">
+          <div class="ds-scroll" id="lurniq-preview-track" tabindex="0" aria-label="Swipe to explore the Today, Calendar and Source screens">
+            <article class="ds-slide ds-home" aria-label="Today preview" role="group" aria-roledescription="slide"><div class="ds-phone"><div class="ds-screen">
+  <div class="ds-status"><span>08:15</span><span class="ds-status-icons">▂▄▆ ▰</span></div><div class="ds-heading"><strong>Today</strong><span class="ds-heading-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span></div>
+  <div class="ds-content">
+   <p class="ds-scope">Showing <b>All children</b> · <b>All schools</b></p>
+   <div class="ds-section-title"><strong>Needs action <span>· 4</span></strong><a>See all</a></div>
+   <div class="ds-task-stack">
+     <div class="ds-task"><span class="ds-task-stripe amber"></span><div><strong>Swimming consent form</strong><small><em>Overdue</em> since 18 Sep · Sami</small></div></div>
+     <div class="ds-task"><span class="ds-task-stripe green"></span><div><strong>Return trip permission form</strong><small>Due <em>today</em> · Omar</small></div></div>
+     <div class="ds-task"><span class="ds-task-stripe blue"></span><div><strong>Swimming lessons, autumn term</strong><small>Due <em>today</em> · Maya</small></div><span class="ds-task-amount">AED 120</span></div>
+     <div class="ds-task"><span class="ds-task-stripe blue"></span><div><strong>Reply to Mrs Patel about reading</strong><small>Due in <em>2 days</em> · Maya</small></div></div>
+   </div>
+   <div class="ds-section-title ds-schedule-heading"><strong>Today's schedule <span>· 5</span></strong><a>See all</a></div>
+   <div class="ds-schedule-stack">
+    <div class="ds-schedule"><span class="ds-time mint">7:30 AM</span><span><strong>Lessons today · Omar</strong><small>1 lesson, 7:30 AM to 8:30 AM</small></span></div>
+    <div class="ds-schedule"><span class="ds-time blue">7:45 AM</span><span><strong>Lessons today · Maya</strong><small>6 lessons, 7:45 AM to 2:20 PM</small></span></div>
+    <div class="ds-schedule"><span class="ds-time cream">2:45 PM</span><span><strong>Early pick-up for the dentist</strong><small>Sami</small></span></div>
+    <div class="ds-schedule"><span class="ds-time mint">3:30 PM</span><span><strong>Football club</strong><small>Omar · Horizon Academy</small></span></div>
+   </div>
+  </div>
+  <span class="ds-filter" aria-hidden="true">☷</span>
+  <nav class="ds-bottom" aria-label="Illustrative app navigation"><span class="ds-tab ds-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-7 9 7v9h-6v-6H9v6H3z"/></svg><small>Home</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg><small>Calendar</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M16 15c3 0 5 2 5 5"/></svg><small>Kids</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 14h5l2 3h4l2-3h5"/></svg><small>Updates</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><small>More</small></span></nav></div></div><p class="ds-caption"><strong>Today</strong><span>Tasks and the day's schedule</span></p></article><article class="ds-slide ds-calendar" aria-label="Calendar preview" role="group" aria-roledescription="slide"><div class="ds-phone"><div class="ds-screen">
+  <div class="ds-status"><span>08:15</span><span class="ds-status-icons">▂▄▆ ▰</span></div><div class="ds-heading"><strong>September 2026</strong><span class="ds-heading-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></div>
+  <div class="ds-content ds-calendar-content">
+   <p class="ds-scope">Showing <b>All children</b> · <b>All schools</b></p>
+   <div class="ds-week-tools"><div class="ds-segment"><span class="on">Week</span><span>Month</span></div><div class="ds-chevrons">‹ &nbsp;&nbsp; ›</div></div>
+   <div class="ds-dates"><span class=""><b>M</b><small>21</small></span><span class="chosen"><b>T</b><small>22</small><i></i></span><span class=""><b>W</b><small>23</small><i></i></span><span class=""><b>T</b><small>24</small><i></i></span><span class=""><b>F</b><small>25</small></span><span class=""><b>S</b><small>26</small><i></i></span><span class=""><b>S</b><small>27</small></span></div>
+   <h3 class="ds-day-title">Today · Tuesday 22 September</h3>
+   <div class="ds-schedule"><span class="ds-time cream">2:45 PM</span><span><strong>Early pick-up for the dentist</strong><small>Sami · Oakfield Primary</small></span></div>
+   <div class="ds-schedule"><span class="ds-time mint">3:30 PM</span><span><strong>Football club</strong><small>Omar · Horizon Academy</small></span></div>
+   <div class="ds-clash"><b>ⓘ</b><span>Two things at 3:30 PM: Omar's Football club and Maya's Swimming lessons.</span></div>
+   <div class="ds-schedule"><span class="ds-time blue">3:30 PM</span><span><strong>Swimming lessons</strong><small>Maya · Cedar Grove School</small></span></div>
+   <div class="ds-schedule"><span class="ds-time neutral">Due</span><span><strong>Return trip permission form</strong><small>Action due <em>today</em> · Omar</small></span></div>
+   <div class="ds-schedule"><span class="ds-time neutral">Due</span><span><strong>Swimming lessons, autumn term</strong><small>Fees due <em>today</em> · AED 120 · Maya</small></span></div>
+   <h3 class="ds-day-title">Wednesday 23 September</h3>
+  </div>
+  <span class="ds-filter" aria-hidden="true">☷</span>
+  <nav class="ds-bottom" aria-label="Illustrative app navigation"><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-7 9 7v9h-6v-6H9v6H3z"/></svg><small>Home</small></span><span class="ds-tab ds-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg><small>Calendar</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M16 15c3 0 5 2 5 5"/></svg><small>Kids</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 14h5l2 3h4l2-3h5"/></svg><small>Updates</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><small>More</small></span></nav></div></div><p class="ds-caption"><strong>Calendar</strong><span>Events, activities and clashes</span></p></article><article class="ds-slide ds-message" aria-label="Source preview" role="group" aria-roledescription="slide"><div class="ds-phone"><div class="ds-screen">
+  <div class="ds-status"><span>08:15</span><span class="ds-status-icons">▂▄▆ ▰</span></div><div class="ds-heading"><span class="ds-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></span><strong>Source</strong></div>
+  <div class="ds-content ds-source-content">
+   <a class="ds-source-link">Source: Gmail 18 Sep 2026 · Year 4 Newsletter</a>
+   <div class="ds-source-message">
+    <p>Dear Year 4 families,</p>
+    <p>International Day is on Wednesday 23 September. Children may come in national dress, and please send a labelled water bottle.</p>
+    <p>Harvest Festival will be on Thursday 1 October at 9:00 in the school hall.</p>
+    <p>The Science Museum trip costs AED 45. Please pay by Friday 9 October.</p>
+    <p>Thank you,<br>Mrs Patel</p>
+   </div>
+   <p class="ds-source-note">Lurniq keeps this extract only. The full email stays in Gmail.</p>
+  </div>
+  <nav class="ds-bottom" aria-label="Illustrative app navigation"><span class="ds-tab ds-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-7 9 7v9h-6v-6H9v6H3z"/></svg><small>Home</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg><small>Calendar</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M16 15c3 0 5 2 5 5"/></svg><small>Kids</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 14h5l2 3h4l2-3h5"/></svg><small>Updates</small></span><span class="ds-tab "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><small>More</small></span></nav></div></div><p class="ds-caption"><strong>Source</strong><span>Check the original information</span></p></article>
           </div>
-          <span class="preview-note">Illustrative preview. Final app screens may differ.</span>
+          <div class="ds-controls" aria-label="Preview navigation">
+            <button type="button" id="lurniq-prev" class="ds-arrow" aria-label="Previous screen">‹</button>
+            <div class="ds-dots" role="group" aria-label="Choose preview screen">
+              <button type="button" class="ds-dot active" data-index="0" aria-label="View Today screen" aria-pressed="true"></button>
+              <button type="button" class="ds-dot" data-index="1" aria-label="View Calendar screen" aria-pressed="false"></button>
+              <button type="button" class="ds-dot" data-index="2" aria-label="View Source screen" aria-pressed="false"></button>
+            </div>
+            <button type="button" id="lurniq-next" class="ds-arrow" aria-label="Next screen">›</button>
+          </div>
+          <p class="ds-swipe-instruction">Swipe left or right to explore the screens</p>
+          <p class="ds-disclaimer">Illustrative screens. Final app design may change.</p>
         </div>
       </div>
     </section>
@@ -537,5 +670,53 @@
       </nav>
     </div>
   </footer>
+
+<script>
+(() => {
+  const track = document.getElementById('lurniq-preview-track');
+  if (!track) return;
+  const slides = Array.from(track.querySelectorAll('.ds-slide'));
+  const dots = Array.from(document.querySelectorAll('.ds-dot'));
+  const prev = document.getElementById('lurniq-prev');
+  const next = document.getElementById('lurniq-next');
+  let selected = 0;
+  const mobile = () => matchMedia('(max-width: 740px)').matches;
+  const show = i => {
+    selected = Math.max(0, Math.min(slides.length - 1, i));
+    const slide = slides[selected];
+    const target = slide.offsetLeft - track.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+    track.scrollTo({left:target,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    update();
+  };
+  const update = () => {
+    if (mobile()) {
+      const centre = track.getBoundingClientRect().left + track.clientWidth / 2;
+      let best = Infinity;
+      slides.forEach((slide,i) => {
+        const r = slide.getBoundingClientRect();
+        const distance = Math.abs(r.left + r.width / 2 - centre);
+        if (distance < best) { best = distance; selected = i; }
+      });
+    }
+    dots.forEach((dot,i) => {dot.classList.toggle('active',i===selected);dot.setAttribute('aria-pressed',String(i===selected));});
+    prev.disabled = selected===0;
+    next.disabled = selected===slides.length-1;
+  };
+  let raf=0;
+  track.addEventListener('scroll',() => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {raf=0;update();});
+  },{passive:true});
+  dots.forEach((dot,i) => dot.addEventListener('click',() => show(i)));
+  prev.addEventListener('click',() => show(selected-1));
+  next.addEventListener('click',() => show(selected+1));
+  track.addEventListener('keydown',event => {
+    if (!mobile()) return;
+    if (event.key==='ArrowRight' || event.key==='ArrowLeft') {event.preventDefault();show(selected+(event.key==='ArrowRight'?1:-1));}
+  });
+  window.addEventListener('resize',update,{passive:true});
+  update();
+})();
+</script>
 </body>
 </html>
