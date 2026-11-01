@@ -62,12 +62,8 @@
     .header-inner {height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}
     .logo-link {display:flex;align-items:center;width:139px;flex:none;text-decoration:none}
     .logo-link svg {display:block;width:100%;height:auto}
-    .header-nav {display:flex;align-items:center;gap:clamp(15px,2.5vw,38px)}
-    .header-nav a {font-size:14px;font-weight:600;text-decoration:none;color:#46474B;white-space:nowrap}
-    .header-nav a:hover,.text-link:hover,.footer-nav a:hover {color:var(--action)}
-    .header-actions {display:flex;align-items:center;gap:24px}
-    .made-by {font-size:12px;color:var(--muted);white-space:nowrap;text-decoration:none}
-    .made-by strong {font-weight:700;color:var(--ink)}
+    .text-link:hover,.footer-nav a:hover {color:var(--action)}
+    .header-actions {display:flex;align-items:center;gap:12px}
     .button {display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:14px 21px;border:1px solid transparent;border-radius:12px;font-size:14px;font-weight:700;line-height:1.3;text-decoration:none;transition:background .18s ease,transform .18s ease,border-color .18s ease}
     .button:hover {transform:translateY(-1px)}
     .button-primary {background:var(--action);color:white}
@@ -191,21 +187,11 @@
     .footer-nav {display:flex;flex-wrap:wrap;align-items:center;gap:13px 23px}
     .footer-nav a {font-size:12px;text-decoration:none;color:var(--muted)}
     @media (max-width:1150px) {
-      .made-by {display:none}
       .hero-grid {grid-template-columns:minmax(0,1.03fr) minmax(320px,.97fr);gap:20px}
       .hero h1 {font-size:clamp(50px,6vw,73px)}
       .preview-note {right:-4px}
     }
     @media (max-width:900px) {
-      .header-nav {display:none}
-      .mobile-nav {display:block;position:relative}
-      .mobile-nav summary {cursor:pointer;list-style:none;display:flex;gap:9px;align-items:center;line-height:1;font-size:14px;font-weight:700;padding:10px}
-      .mobile-nav summary::-webkit-details-marker {display:none}
-      .mobile-nav summary:after {content:"+";font-size:21px;font-weight:400}
-      .mobile-nav[open] summary:after {content:"−"}
-      .mobile-nav nav {position:absolute;right:0;top:calc(100% + 13px);background:var(--bg);border:1px solid var(--line);box-shadow:0 12px 28px rgba(20,20,20,.08);border-radius:13px;width:210px;display:grid;overflow:hidden}
-      .mobile-nav nav a {font-size:14px;font-weight:600;padding:12px 18px;text-decoration:none}
-      .mobile-nav nav a + a {border-top:1px solid var(--line)}
       .hero-grid {min-height:unset;grid-template-columns:1fr 1fr;gap:12px}
       .hero-visual {min-height:550px}
       .phone {width:min(100%,313px)}
@@ -219,7 +205,9 @@
       html {scroll-padding-top:20px}
       .header-inner {height:73px}
       .logo-link {width:120px}
-      .header-actions>.button {display:none}
+      .header-inner {gap:12px}
+      .header-actions>.button {display:inline-flex;font-size:12px;padding:11px 12px;gap:6px}
+      .header-actions>.button svg {display:none}
       .hero-grid {grid-template-columns:1fr;gap:20px;padding-block:56px 62px}
       .hero h1 {font-size:clamp(49px,11vw,70px);margin-bottom:20px;max-width:590px}
       .hero .intro {font-size:17px;margin-bottom:25px}
@@ -256,6 +244,7 @@
       .footer-main {flex-direction:column;align-items:flex-start;gap:22px}
     }
     @media (max-width:380px) {
+      .logo-link {width:105px}
       .hero h1 {font-size:45px}
       .hero-ctas .button {font-size:13px}
       .phone {width:295px}
@@ -356,26 +345,8 @@
           <path fill="#F7AB93" d="M1364 822C1320 823 1281 845 1285 913C1295 888 1310 870 1325 856C1310 875 1297 895 1292 918L1330 891C1352 875 1362 852 1364 822Z"/>
         </svg>
       </a>
-      <nav class="header-nav" aria-label="Main navigation">
-        <a href="/products/">Products</a>
-        <a href="/company/">Company</a>
-        <a href="/approach/">Approach</a>
-        <a href="/#contact">Connect</a>
-      </nav>
       <div class="header-actions">
-        <a class="made-by" href="/" title="Made by 204Labs">by <strong>204Labs</strong></a>
         <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Request early access <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
-        <details class="mobile-nav">
-          <summary>Menu</summary>
-          <nav aria-label="Mobile navigation">
-            <a href="#why">Why Lurniq</a>
-            <a href="#how">How it works</a>
-            <a href="#features">What's inside</a>
-            <a href="#plans">Free &amp; Plus</a>
-            <a href="#questions">Questions</a>
-            <a href="mailto:connect@204labs.com?subject=Lurniq%20early%20access">Request early access</a>
-          </nav>
-        </details>
       </div>
     </div>
   </header>

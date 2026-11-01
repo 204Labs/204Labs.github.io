@@ -90,10 +90,11 @@ for (const file of htmlFiles) {
   const visible = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<!--[\s\S]*?-->/g, ' ').replace(/\s(?:placeholder|autocomplete)="[^"]*"/gi, ' ').toLowerCase();
   for (const phrase of bannedPhrases) if (visible.includes(phrase)) fail(`${file}: contains draft wording "${phrase}"`);
   const nav = html.match(/<nav[^>]*aria-label="Main navigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
-  if (file !== '404.html') {
+  if (file !== '404.html' && file !== 'lurniq/index.html') {
     const labels = nav ? [...nav.matchAll(/>([^<>]+)<\/a>/g)].map((match) => match[1].trim()) : [];
     if (labels.join('|') !== expectedNav.join('|')) fail(`${file}: main navigation should be ${expectedNav.join(', ')} (found ${labels.join(', ') || 'none'})`);
   }
+  if (file === 'lurniq/index.html' && nav) fail('lurniq/index.html: product landing header should not contain corporate main navigation');
   const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   if (!title) fail(`${file}: missing title`);
   else if (title.length > 70) fail(`${file}: title is longer than 70 characters`);
