@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FCFAF8">
+  <meta name="color-scheme" content="light">
+  <title>Lurniq | School life, all in one place</title>
+  <meta name="description" content="Lurniq brings school calendars, timetables, tasks, fees, contacts and important updates together for every child. A calmer way for parents to manage school life. Coming to iOS and Android.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.204labs.com/lurniq/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="204Labs">
+  <meta property="og:title" content="Lurniq | School life, all in one place">
+  <meta property="og:description" content="One calm place for every child's school calendar, tasks, fees and important updates. Lurniq is coming to iOS and Android.">
+  <meta property="og:url" content="https://www.204labs.com/lurniq/">
+  <meta property="og:image" content="https://www.204labs.com/assets/brand/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lurniq | School life, all in one place">
+  <meta name="twitter:description" content="A calmer way for parents to manage school life, across children and schools.">
+  <meta name="twitter:image" content="https://www.204labs.com/assets/brand/social-card.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/cookie-consent.css?v=20261011">
+  <script src="/cookie-consent.js?v=20261001" defer></script>
+  <script src="/analytics.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"WebPage","@id":"https://www.204labs.com/lurniq/#webpage","name":"Lurniq | School life, all in one place","url":"https://www.204labs.com/lurniq/","description":"Lurniq is a parent-controlled school organiser, currently in development.","inLanguage":"en","isPartOf":{"@id":"https://www.204labs.com/#website"}},
+      {"@type":"SoftwareApplication","@id":"https://www.204labs.com/lurniq/#app","name":"Lurniq","applicationCategory":"EducationalApplication","operatingSystem":"Android, iOS","description":"A parent-controlled app to manage school calendars, tasks, fees, timetables and documents for multiple children and schools.","url":"https://www.204labs.com/lurniq/","creator":{"@id":"https://www.204labs.com/#organization"}}
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg:#FCFAF8; --cream:#FBF4EE; --sand:#E7D6C6; --blush:#FADBD0;
+      --ink:#2D2D2D; --muted:#585E6A; --line:#E5E1DC; --action:#B45843;
+      --clay:#C76F56; --white:#fff; --edge:clamp(22px,5.1vw,76px);
+      --max:1240px; --font:"DM Sans",Inter,Arial,sans-serif;
+    }
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth;scroll-padding-top:88px}
+    body {margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+    body,button,a { -webkit-tap-highlight-color:transparent }
+    a {color:inherit;text-underline-offset:4px}
+    button {font:inherit}
+    img,svg {max-width:100%}
+    ::selection {background:var(--blush);color:var(--ink)}
+    :focus-visible {outline:3px solid var(--action);outline-offset:4px}
+    .container {width:min(100% - (var(--edge) * 2),var(--max));margin-inline:auto}
+    .skip {position:absolute;top:-80px;left:15px;z-index:200;background:var(--ink);color:white;padding:10px 18px}
+    .skip:focus {top:12px}
+    .site-header {position:relative;z-index:30;border-bottom:1px solid var(--line);background:rgba(252,250,248,.96)}
+    .header-inner {height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .logo-link {display:flex;align-items:center;width:139px;flex:none;text-decoration:none}
+    .logo-link svg {display:block;width:100%;height:auto}
+    .header-nav {display:flex;align-items:center;gap:clamp(15px,2.5vw,38px)}
+    .header-nav a {font-size:14px;font-weight:600;text-decoration:none;color:#46474B;white-space:nowrap}
+    .header-nav a:hover,.text-link:hover,.footer-nav a:hover {color:var(--action)}
+    .header-actions {display:flex;align-items:center;gap:24px}
+    .made-by {font-size:12px;color:var(--muted);white-space:nowrap;text-decoration:none}
+    .made-by strong {font-weight:700;color:var(--ink)}
+    .button {display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:14px 21px;border:1px solid transparent;border-radius:12px;font-size:14px;font-weight:700;line-height:1.3;text-decoration:none;transition:background .18s ease,transform .18s ease,border-color .18s ease}
+    .button:hover {transform:translateY(-1px)}
+    .button-primary {background:var(--action);color:white}
+    .button-primary:hover {background:#944532}
+    .button-outline {background:transparent;border-color:#C8B9AC;color:var(--ink)}
+    .button-outline:hover {background:#F1E6DF;border-color:#A88F80}
+    .button svg,.text-link svg {width:17px;height:17px;flex:none}
+    .mobile-nav {display:none}
+    h1,h2,h3,p {margin-top:0}
+    h1,h2,h3 {font-weight:600;letter-spacing:-.048em}
+    p {text-wrap:pretty}
+    .hero {overflow:hidden;background:var(--cream)}
+    .hero-grid {display:grid;grid-template-columns:minmax(0,1.08fr) minmax(380px,.92fr);gap:clamp(18px,5vw,84px);align-items:center;min-height:690px;padding-block:84px 78px}
+    .hero-copy {padding-block:10px}
+    .hero h1 {font-size:clamp(50px,5.9vw,88px);line-height:1.055;max-width:760px;margin:0 0 27px}
+    .hero h1 em {font-style:normal;color:var(--action)}
+    .hero .intro {max-width:535px;color:#505058;font-size:clamp(17px,1.45vw,19px);line-height:1.65;margin-bottom:32px}
+    .hero-ctas {display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+    .release-note {display:flex;align-items:center;gap:11px;margin:25px 0 0;font-size:13px;color:var(--muted)}
+    .release-note .dot {width:8px;height:8px;flex:none;border-radius:50%;background:var(--clay)}
+    .hero-visual {position:relative;min-height:580px;display:grid;place-items:center}
+    .hero-visual::before {content:"";position:absolute;width:min(100%,525px);aspect-ratio:1;border-radius:50%;background:#F0E5D8;top:7%;left:52%;transform:translateX(-50%)}
+    .hero-visual::after {content:"";position:absolute;width:120px;height:120px;border:1px solid #DCCABD;border-radius:50%;left:0;bottom:33px}
+    .phone {z-index:1;width:min(100%,346px);border-radius:40px;border:7px solid #363536;background:#fff;overflow:hidden;box-shadow:0 24px 58px rgba(48,35,27,.16),0 6px 15px rgba(48,35,27,.08);transform:rotate(3deg)}
+    .phone-screen {min-height:584px;overflow:hidden;position:relative}
+    .phone-top {background:var(--cream);padding:13px 19px 16px}
+    .phone-status {display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:700;letter-spacing:.02em;padding:0 2px 18px}
+    .phone-status svg {width:43px;height:13px}
+    .phone-greeting {display:flex;align-items:center;gap:7px;margin:0;font-size:24px;line-height:1.16;letter-spacing:-.045em;font-weight:700}
+    .phone-greeting svg {width:20px;height:20px;color:#B88739}
+    .phone-date {font-size:12px;color:var(--muted);margin:6px 0 17px}
+    .phone-kids {display:flex;gap:6px;align-items:center;font-size:11px}
+    .phone-kids span {border:1px solid #E4D8CF;border-radius:8px;padding:6px 10px;background:#FFFCFA}
+    .phone-kids span:first-child {background:#3C3E40;border-color:#3C3E40;color:#fff;font-weight:600}
+    .phone-body {padding:18px 20px 58px}
+    .phone-section-title {display:flex;align-items:center;justify-content:space-between;margin:0 0 7px;font-weight:700;font-size:14px;letter-spacing:-.02em}
+    .phone-section-title span {font-size:11px;color:var(--muted);font-weight:600}
+    .phone-event {display:flex;gap:11px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #ECEAE6}
+    .phone-event .tick {width:27px;height:27px;flex:none;display:grid;place-items:center;border-radius:8px;background:#F3E3D9;color:#8F4E39}
+    .phone-event .tick svg {width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .phone-event strong {display:block;font-size:12px;font-weight:700;line-height:1.3}
+    .phone-event small {display:block;margin-top:4px;font-size:10px;line-height:1.4;color:#696D73}
+    .phone-event .event-end {font-size:10px;font-weight:700;color:#9A513F;margin-left:auto;white-space:nowrap}
+    .phone-next {margin-top:17px}
+    .phone-next .phone-event:last-child {border:0}
+    .phone-bottom {position:absolute;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #EEEAE5;background:#fff;padding:11px 5px 13px}
+    .phone-bottom span {display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#858585;line-height:1.2}
+    .phone-bottom span:first-child {color:#A3513B;font-weight:700}
+    .phone-bottom svg {width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .preview-note {position:absolute;z-index:2;bottom:10px;right:-15px;max-width:205px;font-size:11px;line-height:1.45;color:#6C655F;text-align:right}
+    .promise-band {border-top:1px solid #E5D7CC;border-bottom:1px solid var(--line);background:var(--bg)}
+    .promise-layout {display:grid;grid-template-columns:1fr 1fr 1fr}
+    .promise {padding:31px 25px 32px 0}
+    .promise + .promise {border-left:1px solid var(--line);padding-left:34px}
+    .promise strong {display:block;font-size:15px;line-height:1.35;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+    .promise p {color:var(--muted);font-size:13px;line-height:1.55;margin:0;max-width:330px}
+    .section {padding:clamp(78px,9vw,126px) 0}
+    .section-title {font-size:clamp(34px,4.2vw,56px);line-height:1.12;max-width:740px;margin-bottom:22px}
+    .section-lead {font-size:17px;color:var(--muted);line-height:1.7;max-width:620px}
+    .intro-grid {display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(50px,8vw,150px)}
+    .benefit-rows {border-top:1px solid var(--line)}
+    .benefit-row {border-bottom:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:minmax(150px,.72fr) 1fr;gap:20px;align-items:start}
+    .benefit-row h3 {font-size:19px;line-height:1.3;letter-spacing:-.035em;margin:0}
+    .benefit-row p {margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+    .how {background:#F5ECE5}
+    .how-header {display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-bottom:43px}
+    .how-header .section-title {margin-bottom:0}
+    .how-header p {margin:0;max-width:340px;font-size:16px;color:var(--muted)}
+    .steps {border-top:1px solid #D8CFC8}
+    .step {display:grid;grid-template-columns:76px minmax(210px,.7fr) minmax(0,1fr);gap:28px;align-items:baseline;border-bottom:1px solid #D8CFC8;padding:26px 0 29px}
+    .step-number {font-size:16px;letter-spacing:-.02em;color:#A36554;font-weight:700}
+    .step h3 {font-size:24px;line-height:1.3;margin:0}
+    .step p {margin:0;color:#59595D;font-size:16px;line-height:1.65;max-width:530px}
+    .features-header {display:flex;align-items:end;justify-content:space-between;gap:45px;margin-bottom:36px}
+    .features-header h2 {margin:0}
+    .features-header p {margin:0;max-width:345px;color:var(--muted)}
+    .features-grid {display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:0}
+    .feature {padding:28px 32px 30px 0;border-bottom:1px solid var(--line)}
+    .feature:nth-child(even) {border-left:1px solid var(--line);padding-left:42px}
+    .feature h3 {font-size:20px;margin:0 0 6px;letter-spacing:-.035em}
+    .feature p {margin:0;font-size:15px;color:var(--muted);max-width:460px}
+    .tiers {background:#F9F2EC}
+    .tier-head {max-width:815px;margin-bottom:48px}
+    .tier-head h2 {margin-bottom:16px}
+    .tier-comparison {display:grid;grid-template-columns:1fr 1fr;border:1px solid #E1D4C9;border-radius:20px;overflow:hidden;background:#FFFCFA}
+    .tier {padding:37px clamp(25px,4.5vw,56px) 46px}
+    .tier + .tier {border-left:1px solid #E1D4C9;background:#FFF9F5}
+    .tier h3 {font-size:30px;line-height:1.2;margin:0 0 12px}
+    .tier .tier-description {font-size:16px;color:var(--muted);min-height:52px;max-width:390px;margin-bottom:24px}
+    .tier ul {list-style:none;margin:0;padding:0}
+    .tier li {display:flex;align-items:flex-start;gap:12px;font-size:15px;padding:11px 0;border-top:1px solid #E8E0DA}
+    .tier li svg {width:17px;height:17px;flex:none;color:#A15743;margin-top:4px;stroke-width:2.2}
+    .tier-footnote {margin:17px 0 0;color:var(--muted);font-size:12px;line-height:1.55}
+    .privacy {padding-block:100px;border-bottom:1px solid var(--line)}
+    .privacy-grid {display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,8vw,125px)}
+    .privacy-grid h2 {margin:0}
+    .privacy-notes {border-top:1px solid var(--line)}
+    .privacy-item {padding:23px 0;border-bottom:1px solid var(--line)}
+    .privacy-item strong {font-size:17px;font-weight:700}
+    .privacy-item p {margin:6px 0 0;color:var(--muted);font-size:15px}
+    .faq {background:var(--bg)}
+    .faq-grid {display:grid;grid-template-columns:.64fr 1fr;gap:clamp(40px,9vw,150px)}
+    .faq h2 {margin:0}
+    .faq-list {border-top:1px solid var(--line)}
+    .faq-item {border-bottom:1px solid var(--line)}
+    .faq-item summary {cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;list-style:none;font-weight:700;font-size:16px;line-height:1.45}
+    .faq-item summary::-webkit-details-marker {display:none}
+    .faq-item summary:after {content:"+";flex:none;font-size:24px;font-weight:400;color:var(--action);line-height:1}
+    .faq-item[open] summary:after {content:"−"}
+    .faq-item p {font-size:15px;color:var(--muted);max-width:610px;margin:0 0 23px}
+    .closing {background:var(--cream);border-top:1px solid #EADFD4}
+    .closing-inner {padding-block:78px 83px;display:flex;justify-content:space-between;align-items:center;gap:35px}
+    .closing h2 {font-size:clamp(35px,4vw,54px);margin:0 0 12px;line-height:1.14;max-width:680px}
+    .closing p {margin:0;color:var(--muted);font-size:16px;max-width:615px}
+    .closing .button {flex:none}
+    .footer {background:#F8F4F0;border-top:1px solid var(--line)}
+    .footer-main {padding:35px 0;display:flex;align-items:center;justify-content:space-between;gap:26px}
+    .footer-mark {font-size:14px;line-height:1.6;color:var(--muted)}
+    .footer-mark strong {font-size:15px;color:var(--ink)}
+    .footer-mark p {margin:5px 0 0;font-size:12px}
+    .footer-nav {display:flex;flex-wrap:wrap;align-items:center;gap:13px 23px}
+    .footer-nav a {font-size:12px;text-decoration:none;color:var(--muted)}
+    @media (max-width:1150px) {
+      .made-by {display:none}
+      .hero-grid {grid-template-columns:minmax(0,1.03fr) minmax(320px,.97fr);gap:20px}
+      .hero h1 {font-size:clamp(50px,6vw,73px)}
+      .preview-note {right:-4px}
+    }
+    @media (max-width:900px) {
+      .header-nav {display:none}
+      .mobile-nav {display:block;position:relative}
+      .mobile-nav summary {cursor:pointer;list-style:none;display:flex;gap:9px;align-items:center;line-height:1;font-size:14px;font-weight:700;padding:10px}
+      .mobile-nav summary::-webkit-details-marker {display:none}
+      .mobile-nav summary:after {content:"+";font-size:21px;font-weight:400}
+      .mobile-nav[open] summary:after {content:"−"}
+      .mobile-nav nav {position:absolute;right:0;top:calc(100% + 13px);background:var(--bg);border:1px solid var(--line);box-shadow:0 12px 28px rgba(20,20,20,.08);border-radius:13px;width:210px;display:grid;overflow:hidden}
+      .mobile-nav nav a {font-size:14px;font-weight:600;padding:12px 18px;text-decoration:none}
+      .mobile-nav nav a + a {border-top:1px solid var(--line)}
+      .hero-grid {min-height:unset;grid-template-columns:1fr 1fr;gap:12px}
+      .hero-visual {min-height:550px}
+      .phone {width:min(100%,313px)}
+      .preview-note {bottom:0}
+      .intro-grid {gap:50px}
+      .benefit-row {grid-template-columns:1fr;gap:8px}
+      .faq-grid {gap:50px}
+    }
+    @media (max-width:700px) {
+      :root {--edge:23px}
+      html {scroll-padding-top:20px}
+      .header-inner {height:73px}
+      .logo-link {width:120px}
+      .header-actions>.button {display:none}
+      .hero-grid {grid-template-columns:1fr;gap:20px;padding-block:56px 62px}
+      .hero h1 {font-size:clamp(49px,11vw,70px);margin-bottom:20px;max-width:590px}
+      .hero .intro {font-size:17px;margin-bottom:25px}
+      .hero-ctas {gap:10px}
+      .hero-ctas .button {padding:13px 15px}
+      .release-note {font-size:12px}
+      .hero-visual {min-height:555px;margin-top:7px}
+      .hero-visual::before {width:min(108%,480px);left:50%}
+      .hero-visual::after {left:-17px}
+      .phone {width:min(100%,326px);transform:rotate(2deg)}
+      .preview-note {right:0;bottom:-5px;max-width:155px;font-size:10px}
+      .promise-layout {grid-template-columns:1fr}
+      .promise {padding:22px 0}
+      .promise + .promise {border-left:0;border-top:1px solid var(--line);padding:22px 0}
+      .promise strong {margin-bottom:4px}
+      .section {padding:74px 0}
+      .section-title {font-size:clamp(35px,8vw,48px)}
+      .intro-grid,.privacy-grid,.faq-grid {grid-template-columns:1fr;gap:33px}
+      .benefit-row {grid-template-columns:1fr;gap:9px;padding:20px 0}
+      .how-header,.features-header {display:block}
+      .how-header h2,.features-header h2 {margin-bottom:17px}
+      .step {grid-template-columns:44px 1fr;gap:10px 16px;padding:22px 0}
+      .step h3 {font-size:20px}
+      .step p {grid-column:2;font-size:15px}
+      .features-grid {grid-template-columns:1fr}
+      .feature,.feature:nth-child(even) {border-left:0;padding:19px 0 22px}
+      .tier-comparison {grid-template-columns:1fr}
+      .tier {padding:29px 24px 33px}
+      .tier + .tier {border-left:0;border-top:1px solid #E1D4C9}
+      .tier .tier-description {min-height:0}
+      .privacy {padding-block:76px}
+      .closing-inner {padding-block:67px 72px;display:block}
+      .closing .button {margin-top:26px}
+      .footer-main {flex-direction:column;align-items:flex-start;gap:22px}
+    }
+    @media (max-width:380px) {
+      .hero h1 {font-size:45px}
+      .hero-ctas .button {font-size:13px}
+      .phone {width:295px}
+      .preview-note {bottom:-14px}
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*:before,*:after {animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-link" href="#top" aria-label="Lurniq, back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="340 770 1250 390" role="img" aria-label="Lurniq">
+          <path fill="#3D3E40" d="M360 868H384A23 23 0 0 1 407 891V987A69 69 0 0 0 476 1056H478A22 22 0 0 1 500 1078V1102H476A116 116 0 0 1 360 987Z"/>
+          <path fill="#3D3E40" d="M529 875H553A23 23 0 0 1 576 898V990A70 70 0 0 0 716 990V897A22 22 0 0 1 738 875H763V990A117 117 0 0 1 529 990Z"/>
+          <path fill="#3D3E40" d="M805 1102V985A117 117 0 0 1 922 868H954V892A22 22 0 0 1 932 914H922A71 71 0 0 0 851 985V1080A22 22 0 0 1 829 1102Z"/>
+          <path fill="#3D3E40" d="M974 1100V985A117 117 0 0 1 1208 985V1100H1183A22 22 0 0 1 1161 1078V985A70 70 0 0 0 1021 985V1078A22 22 0 0 1 999 1100Z"/>
+          <path fill="#3D3E40" d="M1250 1100V954A23 23 0 0 1 1273 931H1305V1078A22 22 0 0 1 1283 1100Z"/>
+          <path fill="#3D3E40" d="M1432 1138V1037A14 14 0 0 1 1446 1023H1476V1122A16 16 0 0 1 1460 1138Z"/>
+          <path fill="#3D3E40" fill-rule="evenodd" d="M1337 985A117 117 0 1 0 1571 985A117 117 0 1 0 1337 985ZM1385 985A69 69 0 1 0 1523 985A69 69 0 1 0 1385 985Z"/>
+          <path fill="#71A65B" d="M1143 794C1205 788 1272 810 1282 913C1262 878 1238 856 1207 835C1232 860 1255 890 1270 921C1236 903 1205 889 1188 877C1163 858 1148 828 1143 794Z"/>
+          <path fill="#F7AB93" d="M1364 822C1320 823 1281 845 1285 913C1295 888 1310 870 1325 856C1310 875 1297 895 1292 918L1330 891C1352 875 1362 852 1364 822Z"/>
+        </svg>
+      </a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#why">Why Lurniq</a>
+        <a href="#how">How it works</a>
+        <a href="#features">What's inside</a>
+        <a href="#plans">Free &amp; Plus</a>
+      </nav>
+      <div class="header-actions">
+        <a class="made-by" href="/" title="Made by 204Labs">by <strong>204Labs</strong></a>
+        <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Get launch updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <details class="mobile-nav">
+          <summary>Menu</summary>
+          <nav aria-label="Mobile navigation">
+            <a href="#why">Why Lurniq</a>
+            <a href="#how">How it works</a>
+            <a href="#features">What's inside</a>
+            <a href="#plans">Free &amp; Plus</a>
+            <a href="#questions">Questions</a>
+            <a href="mailto:connect@204labs.com?subject=Lurniq%20early%20access">Get launch updates</a>
+          </nav>
+        </details>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">School life, <em>all in one place.</em></h1>
+          <p class="intro">School emails, activities, timetables, deadlines and fees. Lurniq brings the details together, so you can see what matters for every child without keeping it all in your head.</p>
+          <div class="hero-ctas">
+            <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Get launch updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a class="button button-outline" href="#how">See how it works</a>
+          </div>
+          <p class="release-note"><span class="dot" aria-hidden="true"></span>In development for Android and iOS. Early access is not yet open.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="phone" role="img" aria-label="Illustrative preview of a Lurniq home screen showing an example day for two children, including tasks and school activities.">
+            <div class="phone-screen">
+              <div class="phone-top">
+                <div class="phone-status"><span>9:41</span>
+                  <svg viewBox="0 0 54 14" fill="currentColor" aria-hidden="true"><rect x="0" y="8" width="4" height="6" rx="1"/><rect x="6" y="5" width="4" height="9" rx="1"/><rect x="12" y="2" width="4" height="12" rx="1"/><path d="M27 5c4-4 10-4 14 0l-7 8z"/><rect x="45" y="2" width="7" height="11" rx="2"/></svg>
+                </div>
+                <p class="phone-greeting">Good morning <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></p>
+                <p class="phone-date">Wednesday, 11 November</p>
+                <div class="phone-kids"><span>All children</span><span>Maya</span><span>Adam</span></div>
+              </div>
+              <div class="phone-body">
+                <p class="phone-section-title">Needs attention <span>2 items</span></p>
+                <div class="phone-event">
+                  <span class="tick"><svg viewBox="0 0 24 24"><path d="M8 3h8l4 4v14H4V3h4m8 0v5h4M8 13h8m-8 4h5"/></svg></span>
+                  <div><strong>Return trip consent form</strong><small>Adam · Due Thursday</small></div><span class="event-end">To do</span>
+                </div>
+                <div class="phone-event">
+                  <span class="tick"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zm0 4h16M7 15h4"/></svg></span>
+                  <div><strong>Art workshop fees</strong><small>Maya · AED 80 · Due Friday</small></div>
+                </div>
+                <div class="phone-next">
+                  <p class="phone-section-title">Coming up <span>This week</span></p>
+                  <div class="phone-event">
+                    <span class="tick"><svg viewBox="0 0 24 24"><path d="M7 3v4m10-4v4M4 10h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1z"/></svg></span>
+                    <div><strong>Swimming lesson</strong><small>Maya · Today, 4:00 pm</small></div>
+                  </div>
+                  <div class="phone-event">
+                    <span class="tick"><svg viewBox="0 0 24 24"><path d="M5 20V5l7-2 7 2v15M3 20h18M9 9h6m-6 4h6"/></svg></span>
+                    <div><strong>International Day</strong><small>Adam · Friday · School calendar</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-bottom">
+                <span><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10h-6v-7H9v7H3z"/></svg>Home</span>
+                <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg>Calendar</span>
+                <span><svg viewBox="0 0 24 24"><path d="M9 5h12M9 12h12M9 19h12M3 5l1 1 2-2M3 12l1 1 2-2M3 19l1 1 2-2"/></svg>Tasks</span>
+                <span><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>More</span>
+              </div>
+            </div>
+          </div>
+          <span class="preview-note">Illustrative preview. Final app screens may differ.</span>
+        </div>
+      </div>
+    </section>
+    <div class="promise-band" aria-label="Lurniq at a glance">
+      <div class="container promise-layout">
+        <div class="promise"><strong>All your children, one view</strong><p>Switch between each child's details or see everything together.</p></div>
+        <div class="promise"><strong>Today, tomorrow and beyond</strong><p>Keep track of deadlines, activities and what needs preparing.</p></div>
+        <div class="promise"><strong>Useful without a subscription</strong><p>Start with a complete manual organiser. Add automation if you need it.</p></div>
+      </div>
+    </div>
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container intro-grid">
+        <div>
+          <h2 class="section-title" id="why-title">School information comes from everywhere.</h2>
+          <p class="section-lead">It should not take five apps and a long email search to work out what your child needs tomorrow.</p>
+        </div>
+        <div class="benefit-rows">
+          <div class="benefit-row"><h3>One family view</h3><p>See schedules and responsibilities across children, classes, schools and activities.</p></div>
+          <div class="benefit-row"><h3>Less to remember</h3><p>Put the permission form, payment deadline and sports kit reminder where you will see them.</p></div>
+          <div class="benefit-row"><h3>Know where it came from</h3><p>When information is collected from a connected source, review the original message and correct anything that needs checking.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="how-header">
+          <h2 class="section-title" id="how-title">A clearer school day starts here.</h2>
+          <p>You decide how much you want Lurniq to do. Start small and add more when you're ready.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="step-number">01</span><h3>Add your family</h3><p>Set up each child and school once. Keep calendars, contacts and timetables connected to the right child.</p></div>
+          <div class="step"><span class="step-number">02</span><h3>Bring in the details</h3><p>Add things yourself with Free. With Plus, use supported email and school connections, forwarding or document reading to collect information.</p></div>
+          <div class="step"><span class="step-number">03</span><h3>See what is next</h3><p>Open Today, prepare for tomorrow and check items that need your decision. Nothing important should disappear into another inbox.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="features-header"><h2 class="section-title" id="features-title">The everyday details, together.</h2><p>Built for what parents actually need to organise during the school week.</p></div>
+        <div class="features-grid">
+          <div class="feature"><h3>Today &amp; tomorrow</h3><p>A combined view of what's happening, what's due and what to prepare.</p></div>
+          <div class="feature"><h3>Calendar &amp; activities</h3><p>School events, extracurricular sessions and important dates across children.</p></div>
+          <div class="feature"><h3>Tasks &amp; reminders</h3><p>Permission slips, things to bring, and jobs that cannot be forgotten.</p></div>
+          <div class="feature"><h3>Fees &amp; deadlines</h3><p>Track amounts, due dates and what has been paid. Payments stay with your school.</p></div>
+          <div class="feature"><h3>Timetables &amp; contacts</h3><p>Find the day's lessons, school contacts and useful details in one place.</p></div>
+          <div class="feature"><h3>Documents &amp; school notices</h3><p>Keep important letters, files and the original information behind saved items.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section tiers" id="plans" aria-labelledby="plans-title">
+      <div class="container">
+        <div class="tier-head"><h2 class="section-title" id="plans-title">Free to organise. Plus to do more for you.</h2><p class="section-lead">Every family gets the essentials. Choose Plus when you want school information collected and organised for you.</p></div>
+        <div class="tier-comparison">
+          <div class="tier">
+            <h3>Lurniq Free</h3>
+            <p class="tier-description">A practical school organiser you can use without creating an account.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Children, schools, calendar and timetables</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Tasks, fees, contacts and documents</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Reminders and tomorrow's preparation</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>On-device reading of pasted text</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>School records stored on your phone</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <h3>Lurniq Plus</h3>
+            <p class="tier-description">For parents who want less copying from messages, letters and school portals.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Everything in Free</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Gmail and Outlook connections</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Supported school-portal connections</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Read uploaded letters and messages into items to review</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Encrypted cloud backup and restore</li>
+            </ul>
+            <p class="tier-footnote">Plus will be a paid subscription. Supported connections, availability and pricing will be confirmed at launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="privacy" aria-labelledby="privacy-title">
+      <div class="container privacy-grid">
+        <div><h2 class="section-title" id="privacy-title">Your family comes first. So does your privacy.</h2><p class="section-lead">Lurniq is designed for parents to stay in control of their children's school information.</p></div>
+        <div class="privacy-notes">
+          <div class="privacy-item"><strong>Free works on your phone.</strong><p>No account is needed. Your manually entered school records stay on your device.</p></div>
+          <div class="privacy-item"><strong>You check what gets saved.</strong><p>When Lurniq reads information, unclear details are shown for review rather than quietly treated as correct.</p></div>
+          <div class="privacy-item"><strong>No advertising based on children's data.</strong><p>Lurniq is planned without advertising or the sale of household data. Plus has separate, permission-based connection and processing features.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq" id="questions" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <h2 class="section-title" id="faq-title">A few things you might be wondering.</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Is Lurniq available now?</summary><p>Not yet. Lurniq is in development for Android and iOS. Contact us for updates about early access and launch availability.</p></details>
+          <details class="faq-item"><summary>Can I use it without connecting my email?</summary><p>Yes. Lurniq Free is designed to work without an account or mailbox connection. You can enter school information yourself and keep it organised on your phone.</p></details>
+          <details class="faq-item"><summary>What if my children attend different schools?</summary><p>That is part of the core design. Lurniq brings each child's dates and tasks into one combined view while keeping the individual school information separate.</p></details>
+          <details class="faq-item"><summary>Will it connect to every school portal?</summary><p>No. Lurniq Plus will support selected school portals and email connections. Availability depends on each provider. You can still add items manually, and Plus will offer other supported ways to bring information in.</p></details>
+          <details class="faq-item"><summary>Can I pay school fees in Lurniq?</summary><p>No. Lurniq helps you track fees and record when you have paid them. Payments are made directly to the school or provider.</p></details>
+          <details class="faq-item"><summary>What happens to my information if I stop Plus?</summary><p>The plan is that information already saved stays available to read, edit and export. Automatic collection and cloud features stop when the subscription ends.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing-inner">
+        <div><h2 id="closing-title">Less school admin. More room for everything else.</h2><p>We're building Lurniq to make the school week easier to manage. Get in touch to hear when early access opens.</p></div>
+        <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Get launch updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-mark"><strong>Lurniq</strong> is being built by <a href="/">204Labs</a>.<p>© 2026 204Labs FZE. Licence No. 4432199. United Arab Emirates.</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="mailto:connect@204labs.com?subject=Lurniq%20enquiry">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+        <a href="/">204Labs</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
