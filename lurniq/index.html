@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FCFAF8">
   <meta name="color-scheme" content="light">
   <title>Lurniq | School life, all in one place</title>
-  <meta name="description" content="Lurniq brings school calendars, timetables, tasks, fees, contacts and important updates together for every child. A calmer way for parents to manage school life. Coming to iOS and Android.">
+  <meta name="description" content="Lurniq helps parents manage school dates, forms, timetables, tasks and fees across every child. A calmer way to keep up with school life.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.204labs.com/lurniq/">
   <meta property="og:type" content="website">
@@ -260,6 +260,79 @@
     @media (prefers-reduced-motion:reduce) {
       *,*:before,*:after {animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}
     }
+
+    /* Lurniq's story-led direction uses the product's warm, restrained palette. */
+    .hero-grid {display:flex;flex-direction:column;align-items:stretch;gap:0;padding:76px 0 64px;min-height:0}
+    .hero-copy {position:relative;z-index:3;text-align:center;padding:0}
+    .hero h1 {font-size:clamp(52px,6.8vw,100px);line-height:1.055;max-width:1080px;margin:0 auto 25px;letter-spacing:-.067em}
+    .hero .intro {max-width:680px;font-size:clamp(17px,1.65vw,20px);margin:0 auto 28px}
+    .hero-ctas {justify-content:center}
+    .release-note {justify-content:center;margin-top:21px}
+    .hero-visual {width:100%;max-width:1150px;height:625px;min-height:0;margin:29px auto 0;display:grid;place-items:center}
+    .hero-visual::before {width:640px;height:490px;max-width:88%;aspect-ratio:auto;left:50%;top:6%;border-radius:51% 49% 52% 48% / 55% 51% 49% 45%;background:#F0E2D5;transform:translateX(-50%) rotate(-7deg)}
+    .hero-visual::after {left:calc(50% - 270px);bottom:14%;width:90px;height:90px;border-color:#DCC7B6}
+    .phone {width:330px;transform:rotate(-2deg);box-shadow:0 28px 60px rgba(48,35,27,.16),0 6px 18px rgba(48,35,27,.09)}
+    .floating-note {position:absolute;z-index:2;width:223px;background:#FFFDF9;border:1px solid #DED0C5;box-shadow:0 16px 27px rgba(61,43,33,.08);border-radius:7px;padding:22px;display:flex;flex-direction:column;gap:6px}
+    .floating-note:before {content:"";position:absolute;width:40px;height:6px;background:#E7D7CA;top:-6px;left:22px;transform:rotate(-4deg)}
+    .floating-note .note-date {color:#925E49;font-size:11px;font-weight:600}
+    .floating-note strong {font-size:21px;font-weight:700;line-height:1.23;letter-spacing:-.04em}
+    .floating-note small {font-size:12px;color:var(--muted)}
+    .note-one {left:8%;top:14%;transform:rotate(-8deg)}
+    .note-two {right:7%;top:49%;transform:rotate(6deg)}
+    .preview-note {right:2%;bottom:4%;max-width:230px}
+    .promise {padding-block:25px}.promise + .promise {padding-block:25px}
+    .story-head {display:flex;align-items:flex-end;justify-content:space-between;gap:55px;margin-bottom:42px}
+    .story-head h2 {margin:0;max-width:680px}
+    .story-head p {margin:0;max-width:420px;font-size:16px}
+    .story-grid {display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:19px;overflow:hidden;min-height:460px}
+    .story-input {background:#F3E8DE;padding:36px clamp(26px,4vw,67px);display:grid;place-items:center}
+    .story-paper {width:100%;max-width:480px;border:1px solid #E2D7CA;box-shadow:0 14px 26px rgba(77,52,41,.07);background:#FFFDF9;padding:30px 34px;border-radius:4px;transform:rotate(-1.5deg)}
+    .story-mail {display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px solid #E6DDD6;color:#6D6765;font-size:12px;margin-bottom:21px}
+    .story-mail span:nth-child(2) {flex:1;font-weight:700;color:#505050}
+    .story-mail span:last-child {font-size:10px}
+    .story-subject {font-size:21px;font-weight:700;letter-spacing:-.03em;margin-bottom:21px}
+    .story-paper p:not(.story-subject) {font-size:13px;line-height:1.7;color:#565452}
+    .story-paper p:last-child {margin-bottom:0}
+    .story-output {padding:39px clamp(28px,5vw,75px);background:#FFFCFA;display:flex;flex-direction:column;justify-content:center}
+    .story-output-title {color:#74594C;font-size:14px;font-weight:700;margin-bottom:20px}
+    .story-task {border-top:1px solid #EEE2DB;padding:19px 0;display:flex;align-items:flex-start;gap:18px}
+    .story-day {width:48px;height:43px;display:grid;place-items:center;flex:none;background:#F2E2D8;border-radius:9px;color:#994D3B;font-size:12px;font-weight:700}
+    .story-task strong {font-size:16px;font-weight:700;display:block;line-height:1.3;letter-spacing:-.02em}
+    .story-task small {font-size:12px;color:#626066;display:block;margin-top:5px;line-height:1.45}
+    .story-caption {font-size:11px;line-height:1.5;color:#746E6B;margin:18px 0 0}
+    .feature h3 {font-weight:700}
+    @media(max-width:1100px) {
+      .hero-grid {display:flex;min-height:0;gap:0;padding-top:67px}
+      .hero h1 {font-size:clamp(56px,7.2vw,83px)}
+      .hero-visual {height:592px}
+      .floating-note {width:190px;padding:17px}
+      .floating-note strong {font-size:18px}
+      .note-one {left:1%}.note-two {right:1%}
+      .story-head h2 {max-width:60%}
+    }
+    @media(max-width:700px) {
+      .hero-grid {display:flex;padding:56px 0 68px;gap:0}
+      .hero h1 {font-size:clamp(47px,10.8vw,69px);letter-spacing:-.06em;margin-bottom:20px}
+      .hero .intro {font-size:16.5px;max-width:530px}
+      .hero-visual {height:594px;min-height:0;margin-top:22px}
+      .hero-visual::before {width:100%;height:420px;top:12%}
+      .hero-visual::after {left:-15px;bottom:8%;width:72px;height:72px}
+      .phone {width:min(100%,310px)}
+      .floating-note {display:none}
+      .preview-note {bottom:-7px;right:0;font-size:10px;max-width:152px}
+      .story-head {display:block;margin-bottom:30px}
+      .story-head h2 {max-width:100%;margin-bottom:17px}
+      .story-head p {max-width:620px;font-size:15px}
+      .story-grid {grid-template-columns:1fr}
+      .story-input {padding:38px 23px}
+      .story-paper {padding:24px}
+      .story-output {padding:32px 27px}
+    }
+    @media(max-width:380px) {
+      .hero h1 {font-size:45px}
+      .phone {width:min(100%,280px)}
+      .hero-visual {height:580px}
+    }
   </style>
 </head>
 <body>
@@ -280,14 +353,14 @@
         </svg>
       </a>
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="#why">Why Lurniq</a>
-        <a href="#how">How it works</a>
-        <a href="#features">What's inside</a>
-        <a href="#plans">Free &amp; Plus</a>
+        <a href="/products/">Products</a>
+        <a href="/company/">Company</a>
+        <a href="/approach/">Approach</a>
+        <a href="/#contact">Connect</a>
       </nav>
       <div class="header-actions">
         <a class="made-by" href="/" title="Made by 204Labs">by <strong>204Labs</strong></a>
-        <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Get launch updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Request early access <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
         <details class="mobile-nav">
           <summary>Menu</summary>
           <nav aria-label="Mobile navigation">
@@ -296,7 +369,7 @@
             <a href="#features">What's inside</a>
             <a href="#plans">Free &amp; Plus</a>
             <a href="#questions">Questions</a>
-            <a href="mailto:connect@204labs.com?subject=Lurniq%20early%20access">Get launch updates</a>
+            <a href="mailto:connect@204labs.com?subject=Lurniq%20early%20access">Request early access</a>
           </nav>
         </details>
       </div>
@@ -306,15 +379,17 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 id="hero-title">School life, <em>all in one place.</em></h1>
-          <p class="intro">School emails, activities, timetables, deadlines and fees. Lurniq brings the details together, so you can see what matters for every child without keeping it all in your head.</p>
+          <h1 id="hero-title">School life, <em>without the mental checklist.</em></h1>
+          <p class="intro">The consent forms. The club times. The fee reminders. Know what each child needs and when, without piecing together the school week from six different places.</p>
           <div class="hero-ctas">
-            <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Get launch updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Request early access <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
             <a class="button button-outline" href="#how">See how it works</a>
           </div>
-          <p class="release-note"><span class="dot" aria-hidden="true"></span>In development for Android and iOS. Early access is not yet open.</p>
+          <p class="release-note"><span class="dot" aria-hidden="true"></span>Coming to Android and iOS. Early access requests open your email app.</p>
         </div>
         <div class="hero-visual">
+          <div class="floating-note note-one" aria-hidden="true"><span class="note-date">From school inbox</span><strong>Trip form needs signing</strong><small>Due Thursday</small></div>
+          <div class="floating-note note-two" aria-hidden="true"><span class="note-date">School calendar</span><strong>Sports day moved</strong><small>Now Friday, 9:00 am</small></div>
           <div class="phone" role="img" aria-label="Illustrative preview of a Lurniq home screen showing an example day for two children, including tasks and school activities.">
             <div class="phone-screen">
               <div class="phone-top">
@@ -367,15 +442,25 @@
       </div>
     </div>
     <section class="section" id="why" aria-labelledby="why-title">
-      <div class="container intro-grid">
-        <div>
-          <h2 class="section-title" id="why-title">School information comes from everywhere.</h2>
-          <p class="section-lead">It should not take five apps and a long email search to work out what your child needs tomorrow.</p>
+      <div class="container">
+        <div class="story-head">
+          <h2 class="section-title" id="why-title">One school message. Three things to remember.</h2>
+          <p class="section-lead">A date gets changed. A form needs signing. There is money to pay. The details arrive scattered, but the things you need to do can be clear.</p>
         </div>
-        <div class="benefit-rows">
-          <div class="benefit-row"><h3>One family view</h3><p>See schedules and responsibilities across children, classes, schools and activities.</p></div>
-          <div class="benefit-row"><h3>Less to remember</h3><p>Put the permission form, payment deadline and sports kit reminder where you will see them.</p></div>
-          <div class="benefit-row"><h3>Know where it came from</h3><p>When information is collected from a connected source, review the original message and correct anything that needs checking.</p></div>
+        <div class="story-grid" aria-label="Example showing a school message and the school activities it contains">
+          <div class="story-input"><div class="story-paper">
+            <div class="story-mail"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>School communication</span><span>Example</span></div>
+            <p class="story-subject">Year 4 museum visit</p>
+            <p>Dear Parents,</p><p>Our museum visit is on Thursday. Please return the signed consent form by Wednesday. The AED 80 trip contribution should be paid to the school by Tuesday.</p>
+            <p>Kind regards,<br>School Office</p>
+          </div></div>
+          <div class="story-output">
+            <span class="story-output-title">What Lurniq helps you see</span>
+            <div class="story-task"><span class="story-day">Tue</span><div><strong>Trip fees due</strong><small>Adam · AED 80 · Pay the school directly</small></div></div>
+            <div class="story-task"><span class="story-day">Wed</span><div><strong>Return signed consent form</strong><small>Adam · Action needed</small></div></div>
+            <div class="story-task"><span class="story-day">Thu</span><div><strong>Museum visit</strong><small>Adam · School event</small></div></div>
+            <p class="story-caption">Illustrative example. Automatically collected details may need your review. Connections depend on the school or email provider.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -461,7 +546,7 @@
     <section class="closing" aria-labelledby="closing-title">
       <div class="container closing-inner">
         <div><h2 id="closing-title">Less school admin. More room for everything else.</h2><p>We're building Lurniq to make the school week easier to manage. Get in touch to hear when early access opens.</p></div>
-        <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Get launch updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="button button-primary" href="mailto:connect@204labs.com?subject=Lurniq%20early%20access&amp;body=Hello%2C%0A%0AI%27d%20like%20to%20hear%20when%20Lurniq%20is%20available.">Request early access <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></a>
       </div>
     </section>
   </main>
