@@ -33,17 +33,19 @@ const productRows = products.map((product) => `          <article class="product
             <div class="product-row-body"><p class="product-tagline">${esc(product.tagline)}</p><p>${esc(product.summary)}</p><div class="product-actions">${actionLinks(product, { productPage: true })}</div></div>
           </article>`).join('\n');
 
+const homepageItemList = [...products.map((p) => ({ name: p.name, url: `${origin}/products/${p.slug}/` })), { name: "Lurniq", url: `${origin}/lurniq/` }];
+
 const itemList = `{
       "@type": "ItemList",
       "@id": "${origin}/#products",
       "name": "204Labs software products",
-      "numberOfItems": ${products.length},
+      "numberOfItems": ${homepageItemList.length},
       "itemListElement": [
-${products.map((product, index) => `        {
+${homepageItemList.map((product, index) => `        {
           "@type": "ListItem",
           "position": ${index + 1},
           "name": "${product.name}",
-          "url": "${origin}/products/${product.slug}/"
+          "url": "${product.url}"
         }`).join(',\n')}
       ]
     }`;
