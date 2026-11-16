@@ -1,0 +1,141 @@
+/* Paper Run 3D landing and privacy pages. Built on styles.css + entity.css (site chrome, theme, fonts). */
+.pr-page { --sky: #CDEBFF; --road: #4B5470; --grass: #7CCB5B; --paper: #FFF8EC; }
+
+.pr-hero {
+  padding-block: 40px 72px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+.pr-kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+}
+.pr-kicker::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--coral); }
+.pr-hero h1 {
+  margin-top: 18px;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: .98;
+  letter-spacing: -.02em;
+}
+.pr-hero h1 span {
+  display: block;
+  margin-top: .32em;
+  max-width: 18ch;
+  font-size: clamp(1.35rem, .42em, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  color: var(--coral);
+}
+.pr-hero .lead { margin-top: 22px; max-width: 36ch; font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.5; }
+.pr-actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; }
+.pr-soon {
+  display: inline-flex; align-items: center; gap: 12px;
+  min-height: 52px; padding: 10px 20px 10px 14px;
+  border-radius: 12px; background: var(--navy); color: var(--cream);
+  font-weight: 600; font-size: .9rem; line-height: 1.2;
+}
+html[data-theme=dark] .pr-soon { background: var(--cream); color: var(--navy); }
+.pr-soon svg { width: 26px; height: 26px; flex: none; }
+.pr-soon small { display: block; font-weight: 500; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; opacity: .8; }
+.pr-actions .text-link { font-weight: 600; }
+
+.pr-shot {
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--navy);
+  box-shadow: 0 24px 60px rgb(16 26 44 / .28), 0 0 0 8px var(--navy);
+  transform: rotate(-1.2deg);
+}
+.pr-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+
+.pr-section { padding-block: 56px; border-top: 1px solid var(--line); }
+.pr-section > h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.05; max-width: 22ch; }
+.pr-section > .pr-intro { margin-top: 14px; max-width: 60ch; font-size: 1.05rem; }
+
+.pr-features {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.pr-feature {
+  padding: 22px 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgb(255 255 255 / .45);
+}
+html[data-theme=dark] .pr-feature { background: rgb(255 255 255 / .04); }
+.pr-feature .pr-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  background: var(--mustard); color: var(--navy);
+}
+.pr-feature:nth-child(3n+2) .pr-icon { background: var(--aqua); }
+.pr-feature:nth-child(3n) .pr-icon { background: var(--coral); }
+.pr-feature .pr-icon svg { width: 24px; height: 24px; }
+.pr-feature h3 { margin-top: 16px; font-size: 1.2rem; }
+.pr-feature p { margin-top: 8px; }
+
+.pr-steps { margin: 30px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; counter-reset: step; }
+.pr-steps li { counter-increment: step; padding-top: 16px; border-top: 3px solid var(--coral); }
+.pr-steps li:nth-child(2) { border-color: var(--mustard); }
+.pr-steps li:nth-child(3) { border-color: var(--aqua); }
+.pr-steps li::before { content: counter(step, decimal-leading-zero); font-family: "Space Grotesk", Arial, sans-serif; font-size: .85rem; font-weight: 600; letter-spacing: .08em; }
+.pr-steps h3 { margin-top: 6px; font-size: 1.15rem; }
+.pr-steps p { margin-top: 6px; }
+
+.pr-gallery { margin-top: 30px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.pr-gallery figure { margin: 0; }
+.pr-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 14px; border: 1px solid var(--line); }
+.pr-gallery figcaption { margin-top: 10px; font-size: .9rem; opacity: .85; }
+
+.pr-faq { margin-top: 26px; max-width: 820px; }
+.pr-faq details { border-top: 1px solid var(--line); }
+.pr-faq details:last-child { border-bottom: 1px solid var(--line); }
+.pr-faq summary {
+  cursor: pointer; list-style: none;
+  min-height: 56px; padding-block: 16px;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font-family: "Space Grotesk", Arial, sans-serif; font-size: 1.1rem; font-weight: 500;
+}
+.pr-faq summary::-webkit-details-marker { display: none; }
+.pr-faq summary::after { content: "+"; font-size: 1.5rem; line-height: 1; }
+.pr-faq details[open] summary::after { content: "−"; }
+.pr-faq details p { padding-bottom: 18px; max-width: 64ch; }
+
+.pr-closing {
+  margin-block: 24px 64px;
+  padding: clamp(28px, 5vw, 56px);
+  border-radius: 22px;
+  background: var(--navy); color: var(--cream);
+  display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between;
+}
+html[data-theme=dark] .pr-closing { background: var(--navy-soft); }
+.pr-closing h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); max-width: 20ch; }
+.pr-closing p { margin-top: 10px; max-width: 46ch; opacity: .9; }
+.pr-closing .button { background: var(--coral); color: var(--navy); border-color: var(--coral); }
+
+/* Privacy page */
+.pr-legal { padding-block: 40px 72px; border-top: 1px solid var(--line); max-width: 780px; }
+.pr-legal h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.02; }
+.pr-legal .pr-updated { margin-top: 12px; font-size: .9rem; opacity: .85; }
+.pr-legal h2 { margin-top: 38px; font-size: 1.45rem; }
+.pr-legal p, .pr-legal ul { margin: 12px 0 0; font-size: 1.02rem; line-height: 1.65; }
+.pr-legal ul { padding-left: 22px; }
+.pr-legal li + li { margin-top: 4px; }
+.pr-legal a { text-underline-offset: 4px; }
+
+@media (max-width: 900px) {
+  .pr-hero { grid-template-columns: 1fr; padding-block: 28px 56px; }
+  .pr-shot { transform: none; }
+  .pr-features, .pr-steps { grid-template-columns: 1fr; }
+  .pr-gallery { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .pr-shot { transform: none; } }
+
+/* A breadcrumb with two links (Products / Paper Run 3D / Privacy Policy) needs the separator between the links too. */
+.pr-page .breadcrumb a + a::before { content: "/"; padding-right: 8px; opacity: .45; display: inline-block; text-decoration: none; }

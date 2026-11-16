@@ -152,5 +152,50 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "paper-run",
+    "name": "Paper Run 3D",
+    "status": "Coming soon",
+    "tagline": "Deliver the morning paper. Dodge everything else.",
+    "summary": "An arcade runner for Android. Ride Kit's kick-scooter through a cartoon 3D suburb and land every newspaper on the right porch before the morning is over, one street a day from Monday to Sunday.",
+    "headline": "Paper Run 3D: deliver the morning paper, dodge everything else.",
+    "metaDescription": "Paper Run 3D is an arcade runner game from 204Labs, coming soon to Google Play: deliver newspapers through a cartoon 3D suburb, one street a day.",
+    "category": "GameApplication",
+    "website": {
+      "label": "Explore Paper Run 3D",
+      "url": "https://www.204labs.com/paper-run/",
+      "display": "204labs.com/paper-run"
+    },
+    "action": {
+      "label": "Explore Paper Run 3D",
+      "url": "https://www.204labs.com/paper-run/"
+    },
+    "sections": [
+      {
+        "title": "Who it is for",
+        "body": [
+          "Players aged 13 and up who enjoy quick, colourful arcade runs that can be mastered one street at a time."
+        ]
+      },
+      {
+        "title": "How it plays",
+        "body": [
+          "Drag to steer, flick up to jump and down to duck, swipe to take the turn at each junction, and tap a side of the screen to throw. Each day is a new street with its own residents, traffic and surprises."
+        ]
+      },
+      {
+        "title": "Availability",
+        "body": [
+          "Paper Run 3D is coming soon to Google Play on Android. It is free to play, with optional in-app purchases and ads."
+        ]
+      },
+      {
+        "title": "Privacy",
+        "body": [
+          "Paper Run 3D has no accounts, and progress is saved on the player's phone. The Paper Run 3D privacy policy explains how ads and purchases handle data."
+        ]
+      }
+    ]
   }
 ]
