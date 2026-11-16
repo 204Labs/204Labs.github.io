@@ -15,14 +15,21 @@ const write = (file, content) => {
   fs.writeFileSync(full, content);
 };
 const arrow = '<span aria-hidden="true">↗</span>';
+const countWord = (n) => ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'][n] ?? String(n);
+// Product landings kept by hand outside data/products.json (each has its own page and legal pages).
+const landingRoutes = ['/lurniq/', '/lurniq/privacy/', '/lurniq/terms/', '/paper-run/', '/paper-run/privacy/'];
 
 const actionLinks = (product, { productPage }) => {
   // The first link is the product's one primary action; the rest are secondary.
   const primary = 'button button-navy button-small';
   const links = [];
   if (product.action?.email) links.push(`<a class="${primary}" href="mailto:${esc(product.action.email)}${product.action.subject ? `?subject=${encodeURIComponent(product.action.subject)}` : ''}">${esc(product.action.label)}</a>`);
-  if (product.action?.url) links.push(`<a class="${primary}" href="${esc(product.action.url)}" target="_blank" rel="noopener noreferrer">${esc(product.action.label)} ${arrow}</a>`);
-  if (product.website && product.website.url !== product.action?.url) links.push(`<a class="text-link" href="${esc(product.website.url)}" target="_blank" rel="noopener noreferrer">${esc(product.website.label)} ${arrow}</a>`);
+  // A link to a page on this site opens in place, without the external-link arrow.
+  const external = (url) => !(url.startsWith('/') || url.startsWith(`${origin}/`));
+  const outbound = (url) => (external(url) ? ' target="_blank" rel="noopener noreferrer"' : '');
+  const mark = (url) => (external(url) ? ` ${arrow}` : '');
+  if (product.action?.url) links.push(`<a class="${primary}" href="${esc(product.action.url)}"${outbound(product.action.url)}>${esc(product.action.label)}${mark(product.action.url)}</a>`);
+  if (product.website && product.website.url !== product.action?.url) links.push(`<a class="text-link" href="${esc(product.website.url)}"${outbound(product.website.url)}>${esc(product.website.label)}${mark(product.website.url)}</a>`);
   if (productPage) links.push(`<a class="text-link" href="/products/${product.slug}/">About ${esc(product.name)}</a>`);
   return links.join('');
 };
@@ -153,7 +160,7 @@ ${footer()}
 <body class="entity-page">
 ${header(route)}
   <main class="wrap" id="main">
-    <section class="entity-hero"><h1>Products</h1><p class="lead">204Labs builds and owns ${products.length === 4 ? 'four' : products.length} software products.</p></section>
+    <section class="entity-hero"><h1>Products</h1><p class="lead">204Labs builds and owns ${countWord(products.length)} software products.</p></section>
     <section class="entity-card-grid">
 ${products.map((product) => `      <a class="entity-card" href="/products/${product.slug}/"><span class="status">${esc(product.status)}</span><h2>${esc(product.name)}</h2><p>${esc(product.tagline)}</p></a>`).join('\n')}
     </section>
@@ -271,8 +278,8 @@ for (const file of ['privacy.html', 'terms.html', 'cookie-policy.html']) {
   const previous = fs.existsSync(path.join(root, 'sitemap.xml')) ? fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8') : '';
   const stamp = (route) => previous.match(new RegExp(`<loc>${origin}${route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc><lastmod>([^<]+)</lastmod>`))?.[1];
   const legal = ['/terms.html', '/privacy.html', '/cookie-policy.html'];
-  const routes = ['/', '/company/', '/approach/', '/products/', ...products.map((product) => `/products/${product.slug}/`), ...legal];
-  const lastmod = (route) => (legal.includes(route) ? stamp(route) ?? today : site.contentUpdated ?? today);
+  const routes = ['/', '/company/', '/approach/', '/products/', ...products.map((product) => `/products/${product.slug}/`), ...legal, ...landingRoutes];
+  const lastmod = (route) => (legal.includes(route) || landingRoutes.includes(route) ? stamp(route) ?? today : site.contentUpdated ?? today);
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map((route) => `  <url><loc>${origin}${route}</loc><lastmod>${lastmod(route)}</lastmod></url>`).join('\n')}
