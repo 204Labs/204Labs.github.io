@@ -155,20 +155,20 @@
   },
   {
     "slug": "paper-run",
-    "name": "Paper Run 3D",
-    "status": "Coming soon",
-    "tagline": "Deliver the morning paper. Dodge everything else.",
-    "summary": "An arcade runner for Android. Ride Kit's kick-scooter through a cartoon 3D suburb and land every newspaper on the right porch before the morning is over, one street a day from Monday to Sunday.",
-    "headline": "Paper Run 3D: deliver the morning paper, dodge everything else.",
-    "metaDescription": "Paper Run 3D is an arcade runner game from 204Labs, coming soon to Google Play: deliver newspapers through a cartoon 3D suburb, one street a day.",
+    "name": "Paper Run",
+    "status": "On Google Play",
+    "tagline": "Deliver the paper and try not to get knocked down",
+    "summary": "An endless arcade game for Android. Ride Kit's scooter through seven suburbs and land the morning paper in every mailbox, one street a day, week after week, until the last heart is gone.",
+    "headline": "Paper Run: deliver the paper and try not to get knocked down.",
+    "metaDescription": "Paper Run is an arcade game from 204Labs, free on Google Play: deliver newspapers through seven cartoon suburbs, one street a day, week after week.",
     "category": "GameApplication",
     "website": {
-      "label": "Explore Paper Run 3D",
+      "label": "Explore Paper Run",
       "url": "https://www.204labs.com/paper-run/",
       "display": "204labs.com/paper-run"
     },
     "action": {
-      "label": "Explore Paper Run 3D",
+      "label": "Explore Paper Run",
       "url": "https://www.204labs.com/paper-run/"
     },
     "sections": [
@@ -181,19 +181,19 @@
       {
         "title": "How it plays",
         "body": [
-          "Drag to steer, flick up to jump and down to duck, swipe to take the turn at each junction, and tap a side of the screen to throw. Each day is a new street with its own residents, traffic and surprises."
+          "Drag to steer, flick up to jump and down to duck, swipe to take the turn at each junction, and tap a side of the screen to throw. Mailbox hits build a combo, five in a row start a Mail Rush, and each day is a longer, faster street. There are three new goals every day, medals for every day of the week and two side quests."
         ]
       },
       {
         "title": "Availability",
         "body": [
-          "Paper Run 3D is coming soon to Google Play on Android. It is free to play, with optional in-app purchases and ads."
+          "Paper Run 1.0.0 is on Google Play for Android. It is free to play, with ads and optional in-app purchases."
         ]
       },
       {
         "title": "Privacy",
         "body": [
-          "Paper Run 3D has no accounts, and progress is saved on the player's phone. The Paper Run 3D privacy policy explains how ads and purchases handle data."
+          "Paper Run has no account of its own, and progress is saved on the player's phone, with an optional copy in the player's own Google Play Games account. The Paper Run privacy policy explains how ads, purchases and usage reports handle data."
         ]
       }
     ]

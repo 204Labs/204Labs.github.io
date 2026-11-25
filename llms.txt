@@ -8,7 +8,7 @@
 - [bAIsect](https://www.204labs.com/products/baisect/): For when building with AI gets you almost there. Status: In development. Website: https://www.baisect.com/
 - [Sevaya.lk](https://www.204labs.com/products/sevaya/): Answers from official sources, with the source beside every one. Status: Launching soon. Website: https://www.sevaya.lk
 - [FlatIntel](https://www.204labs.com/products/flatintel/): Know more before you sign the lease. Status: In development.
-- [Paper Run 3D](https://www.204labs.com/products/paper-run/): Deliver the morning paper. Dodge everything else. Status: Coming soon. Website: https://www.204labs.com/paper-run/
+- [Paper Run](https://www.204labs.com/products/paper-run/): Deliver the paper and try not to get knocked down Status: On Google Play. Website: https://www.204labs.com/paper-run/
 
 ## Company
 
