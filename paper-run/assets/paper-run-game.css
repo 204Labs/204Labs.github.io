@@ -1,0 +1,54 @@
+/* Paper Run landing page in the game's own style: its fonts (Fredoka, Press Start 2P) and its palette. */
+@font-face{font-family:"Fredoka";src:url("fonts/fredoka.woff2") format("woff2");font-style:normal;font-weight:300 700;font-display:swap}
+@font-face{font-family:"Press Start 2P";src:url("fonts/press-start-2p.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+.prg{--g-ink:#0D1F3B;--g-navy:#143D65;--g-blue:#2785D0;--g-sky:#80CDF4;--g-paper:#FFF9EC;--g-yellow:#F7C844;--g-orange:#EC784E;--g-red:#ED4D52;--g-green:#25936A;--g-mint:#99E6C4;--g-logo:#F0CA5D}
+.prg main{font-family:"Fredoka",Inter,Arial,sans-serif;color:var(--g-ink)}
+.prg main h1,.prg main h2,.prg main h3{font-family:"Fredoka",Arial,sans-serif;font-weight:700;letter-spacing:0}
+.prg .breadcrumb{padding-block:14px}
+.prg-hero{background:linear-gradient(180deg,var(--g-sky) 0%,#CDEBFF 72%,#8ED36A 72%,#6FC455 100%);border-block:4px solid var(--g-ink)}
+.prg-hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,64px);align-items:center;padding-block:clamp(36px,6vw,80px)}
+.prg-icon{width:112px;height:112px;border-radius:26px;border:4px solid var(--g-ink);box-shadow:0 6px 0 var(--g-ink);background:var(--g-logo)}
+.prg-kicker{margin-top:22px;font-family:"Press Start 2P",monospace;font-size:.62rem;line-height:1.6;letter-spacing:.04em;text-transform:uppercase;color:var(--g-navy)}
+.prg-hero h1{margin-top:10px;font-size:clamp(3.4rem,8vw,6.4rem);line-height:.95;text-transform:uppercase;color:var(--g-yellow);-webkit-text-stroke:3px var(--g-ink);paint-order:stroke fill;text-shadow:0 6px 0 var(--g-ink)}
+.prg-tag{margin-top:18px;font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:600;line-height:1.15;color:var(--g-ink)}
+.prg-lead{margin-top:12px;max-width:40ch;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.5;color:var(--g-ink)}
+.prg-cta{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.prg-play{display:inline-block;line-height:0;border-radius:14px;transition:transform .12s ease}
+.prg-play img{width:clamp(210px,24vw,270px);height:auto;display:block}
+.prg-play:hover,.prg-play:focus-visible{transform:translateY(-3px)}
+.prg-play-big img{width:clamp(250px,34vw,340px)}
+.prg-free{font-weight:600;font-size:.98rem;color:var(--g-ink)}
+.prg-hero-shot{margin:0}
+.prg-hero-shot img,.prg-gallery img,.prg-video video{display:block;width:100%;height:auto;border-radius:18px;border:4px solid var(--g-ink);box-shadow:0 8px 0 var(--g-ink);background:var(--g-ink)}
+.prg-band{padding-block:clamp(44px,6vw,76px);background:var(--g-paper)}
+.prg-band h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.05;color:var(--g-navy)}
+.prg-band-navy{background:var(--g-ink);border-block:4px solid var(--g-yellow)}
+.prg-band-navy h2{color:var(--g-yellow);text-transform:uppercase}
+.prg-band-sky{background:var(--g-sky);border-block:4px solid var(--g-ink)}
+.prg-video{margin-top:26px;max-width:1040px}
+.prg-video video{border-color:var(--g-yellow);box-shadow:0 8px 0 rgb(0 0 0 / .45)}
+.prg-note{margin-top:20px;font-size:.92rem;color:var(--g-sky)}
+.prg-cards{margin-top:30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.prg-card{padding:22px 22px 24px;border-radius:16px;background:var(--g-navy);border:3px solid var(--g-yellow);box-shadow:0 6px 0 var(--g-ink);color:var(--g-paper)}
+.prg-card h3{font-size:1.3rem;line-height:1.15;color:var(--g-yellow)}
+.prg-card p{margin-top:10px;font-size:1.02rem;line-height:1.5;color:var(--g-paper)}
+.prg-steps{margin:30px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:step}
+.prg-steps li{counter-increment:step;padding:22px;border-radius:16px;background:var(--g-paper);border:4px solid var(--g-ink);box-shadow:0 6px 0 var(--g-ink)}
+.prg-steps li::before{content:counter(step);display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--g-yellow);border:3px solid var(--g-ink);font-family:"Press Start 2P",monospace;font-size:.9rem;color:var(--g-ink)}
+.prg-steps h3{margin-top:14px;font-size:1.3rem;color:var(--g-navy)}
+.prg-steps p{margin-top:8px;line-height:1.5}
+.prg-gallery{margin-top:30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}
+.prg-gallery figure{margin:0}
+.prg-gallery figcaption{margin-top:16px;font-weight:600;color:var(--g-navy)}
+.prg-faq{margin-top:26px;max-width:860px}
+.prg-faq details{border-bottom:2px solid rgb(128 205 244 / .35);padding-block:16px}
+.prg-faq summary{cursor:pointer;font-size:1.2rem;font-weight:600;color:var(--g-paper)}
+.prg-faq p{margin-top:10px;line-height:1.55;color:var(--g-paper)}
+.prg-faq a{color:var(--g-yellow)}
+.prg-closing{text-align:center;background:var(--g-logo);border-top:4px solid var(--g-ink)}
+.prg-closing h2{color:var(--g-ink)}
+.prg-closing .prg-play{margin-top:22px}
+.prg-legal-line{margin-top:18px;font-size:.85rem;color:var(--g-ink)}
+.prg-legal-line a{color:var(--g-ink)}
+@media (max-width:900px){.prg-hero-in{grid-template-columns:1fr}.prg-cards,.prg-steps{grid-template-columns:1fr}.prg-gallery{grid-template-columns:1fr}.prg-hero h1{-webkit-text-stroke-width:2px}}
+@media (prefers-reduced-motion:reduce){.prg-play{transition:none}}

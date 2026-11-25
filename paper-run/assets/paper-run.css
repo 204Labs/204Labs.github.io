@@ -1,4 +1,4 @@
-/* Paper Run 3D landing and privacy pages. Built on styles.css + entity.css (site chrome, theme, fonts). */
+/* Paper Run landing and privacy pages. Built on styles.css + entity.css (site chrome, theme, fonts). */
 .pr-page { --sky: #CDEBFF; --road: #4B5470; --grass: #7CCB5B; --paper: #FFF8EC; }
 
 .pr-hero {
@@ -137,5 +137,5 @@ html[data-theme=dark] .pr-closing { background: var(--navy-soft); }
 }
 @media (prefers-reduced-motion: reduce) { .pr-shot { transform: none; } }
 
-/* A breadcrumb with two links (Products / Paper Run 3D / Privacy Policy) needs the separator between the links too. */
+/* A breadcrumb with two links (Products / Paper Run / Privacy Policy) needs the separator between the links too. */
 .pr-page .breadcrumb a + a::before { content: "/"; padding-right: 8px; opacity: .45; display: inline-block; text-decoration: none; }
