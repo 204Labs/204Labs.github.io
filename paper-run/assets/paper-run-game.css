@@ -18,12 +18,10 @@
 .prg-play-big img{width:clamp(250px,34vw,340px)}
 .prg-free{font-weight:600;font-size:.98rem;color:var(--g-ink)}
 /* The App Store badge (Apple's own artwork, first in the row as Apple asks) beside Google Play's; their visible heights
-   match (Google's image carries its own clear space). The App Store one is not a link until the game is there. */
+   match (Google's image carries its own clear space). */
 .prg-badges{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
-.prg-store{display:inline-flex;flex-direction:column;align-items:center;gap:6px;line-height:1}
-.prg-store img{height:clamp(56px,6.25vw,70px);width:auto;display:block}
-.prg-badges-big .prg-store img{height:clamp(66px,8.85vw,88px)}
-.prg-soon{margin-inline:auto;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--g-ink)}
+.prg-play.prg-store img{height:clamp(56px,6.25vw,70px);width:auto}
+.prg-badges-big .prg-play.prg-store img{height:clamp(66px,8.85vw,88px);width:auto}
 .prg-follow{flex-basis:100%;display:flex;align-items:center;gap:10px;margin-top:6px;font-weight:600;color:var(--g-ink)}
 .prg-follow a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--g-ink);color:#fff;transition:transform .12s ease}
 .prg-follow a:hover,.prg-follow a:focus-visible{transform:translateY(-2px)}
