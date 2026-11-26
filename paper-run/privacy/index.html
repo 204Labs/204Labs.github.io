@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>(()=>{try{const s=localStorage.getItem('204labs_theme');const d=matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s||(d?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})();</script>
   <title>Paper Run Privacy Policy | 204Labs</title>
-  <meta name="description" content="How the Paper Run game by 204Labs handles information: no accounts, progress kept on your phone, Google AdMob ads and Google Play purchases.">
+  <meta name="description" content="How the Paper Run game by 204Labs handles information: progress kept on your phone, leaderboards, Google AdMob ads and Google Play purchases, on Android, iPhone and iPad.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.204labs.com/paper-run/privacy/">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -17,7 +17,7 @@
   <script src="/cookie-consent.js?v=20261001" defer></script>
   <script src="/analytics.js" defer></script>
   <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://www.204labs.com/products/"},{"@type":"ListItem","position":2,"name":"Paper Run","item":"https://www.204labs.com/paper-run/"},{"@type":"ListItem","position":3,"name":"Privacy Policy","item":"https://www.204labs.com/paper-run/privacy/"}]},{"@type":"WebPage","@id":"https://www.204labs.com/paper-run/privacy/#webpage","url":"https://www.204labs.com/paper-run/privacy/","name":"Paper Run Privacy Policy | 204Labs","description":"How the Paper Run game by 204Labs handles information: no accounts, progress kept on your phone, Google AdMob ads and Google Play purchases.","isPartOf":{"@id":"https://www.204labs.com/#website"},"inLanguage":"en","dateModified":"2026-11-16"}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Products","item":"https://www.204labs.com/products/"},{"@type":"ListItem","position":2,"name":"Paper Run","item":"https://www.204labs.com/paper-run/"},{"@type":"ListItem","position":3,"name":"Privacy Policy","item":"https://www.204labs.com/paper-run/privacy/"}]},{"@type":"WebPage","@id":"https://www.204labs.com/paper-run/privacy/#webpage","url":"https://www.204labs.com/paper-run/privacy/","name":"Paper Run Privacy Policy | 204Labs","description":"How the Paper Run game by 204Labs handles information: progress kept on your phone, leaderboards, Google AdMob ads and Google Play purchases, on Android, iPhone and iPad.","isPartOf":{"@id":"https://www.204labs.com/#website"},"inLanguage":"en","dateModified":"2026-11-26"}]}
   </script>
 </head>
 <body class="entity-page pr-page">
@@ -31,17 +31,29 @@
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/products/">Products</a><a href="/paper-run/">Paper Run</a><span>Privacy Policy</span></nav>
     <article class="pr-legal">
       <h1>Paper Run – Privacy Policy</h1>
-      <p class="pr-updated">Last updated: 25 November 2026 (first public release, version 1.0.0: the testers' feedback button is gone from the game)</p>
+      <p class="pr-updated">Last updated: 26 November 2026</p>
 
       <h2>Who we are</h2>
-      <p>Paper Run is a mobile game for Android made by 204 Labs ("we", "us"). This policy explains what information the game uses, why, and the choices you have. It applies to the Paper Run app on Google Play.</p>
+      <p>Paper Run is a mobile game for Android, iPhone and iPad made by 204 Labs ("we", "us"). This policy explains what information the game uses, why, and the choices you have. It applies to the Paper Run app on Google Play and on Apple's App Store.</p>
       <p>Questions or requests about your privacy: <strong><a href="mailto:connect@204labs.com">connect@204labs.com</a></strong>.</p>
 
       <h2>What the game keeps on your phone</h2>
-      <p>Paper Run has no account of its own. Your progress (days cleared, scores, unlocked outfits, coins, settings) is saved on your device. We do not receive it.</p>
-      <p>We do not collect your name, email address, contacts, photos, precise location or microphone audio.</p>
+      <p>Paper Run has no account for you to make. Your progress (days cleared, scores, unlocked outfits, coins, settings) is saved on your device. Apart from the leaderboard entries described below, we do not receive it.</p>
+      <p>We do not collect your email address, contacts, photos, precise location or microphone audio.</p>
       <p>Google Play may share with us statistics it gathers itself, such as crash reports and install counts, according to your device settings and Google's own policies.</p>
 
+      <h2>Leaderboards</h2>
+      <p>Paper Run has world and country leaderboards for the best run, the distance ridden, the longest delivery streak and the Daily Route, for today, this week and of all time. They work the same in every country and need no sign-up.</p>
+      <p>When you finish a run with a score better than your own best on a board, the game sends that entry to our leaderboard service. Each entry holds:</p>
+      <ul>
+        <li>a player name: your Google Play Games name if you are signed in to Play Games on Android, otherwise "RIDER" and four letters</li>
+        <li>a two-letter country code, taken from the region in your phone's language settings (not from your location)</li>
+        <li>your score for that board, and the board's name (which board, and which day or week)</li>
+        <li>a random ID for this install of the game, made when the game first connects. It is not your name, your Google account or your Apple ID</li>
+      </ul>
+      <p>Anyone who plays Paper Run can see the leaderboards: the player name, the country flag, the score and the rank. The random ID is not shown.</p>
+      <p>The leaderboards use Cloud Firestore and Firebase Authentication (anonymous sign-in), Google services that we use as our service provider. Cloud Firestore keeps the entries in the European Union. Data travels to them over encrypted connections, and the service's rules let each install write only its own entries, and only to raise a score.</p>
+      <p>We use the entries only to show the leaderboards and your rank. We do not use them for advertising, and we do not sell them.</p>
       <h2>Cloud save with Google Play Games</h2>
       <p>Where the game offers cloud save and you are signed in to Google Play Games on your phone, the game also keeps a copy of your saved game in your own Google Play Games account. This is so your progress, and anything you bought, comes back after a reinstall or on a new phone.</p>
       <p>That copy holds the same gameplay information as the save on your phone and nothing else. Google stores it under your Google account, as described in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>. We do not receive it and cannot read it. If you are not signed in to Google Play Games, no copy is made and the game plays the same.</p>
@@ -72,8 +84,11 @@
       <p>You can also reset or delete your advertising ID, or opt out of personalised ads, in your Android settings (Settings → Privacy → Ads, or Google → Ads, depending on your phone).</p>
 
       <h2>In-app purchases</h2>
-      <p>Purchases in Paper Run (Remove ads, Coin doubler and coin packs) are made through Google Play Billing. Google handles the payment; we never see your card or bank details.</p>
+      <p>Purchases in Paper Run on Android (Remove ads, Coin doubler and coin packs) are made through Google Play Billing. Google handles the payment; we never see your card or bank details.</p>
       <p>For each purchase, Google gives the game an order number and a purchase token so it can unlock what you bought and restore it if you reinstall. Google Play's handling of your payment information is covered by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
+
+      <h2>On iPhone and iPad</h2>
+      <p>On iPhone and iPad, Paper Run uses the leaderboards described above. It shows no ads, has no in-app purchases or cloud save, and sends no usage or crash reports.</p>
 
       <h2>Children</h2>
       <p>Paper Run is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child under 13 has given us information, email us and we will delete it.</p>
@@ -81,13 +96,14 @@
       <h2>Keeping and deleting your information</h2>
       <p>Your saved game stays on your phone until you clear the app's data or uninstall it. Uninstalling deletes it.</p>
       <p>A cloud save copy stays in your Google Play Games account until you delete it. To delete it, open the Google Play Games app, go to Settings, tap "Delete Play Games account &amp; data", find Paper Run under "Delete individual game data" and tap Delete.</p>
+      <p>Leaderboard entries stay on their boards until we remove them. Uninstalling the game does not remove them. To have your entries removed, email connect@204labs.com with the player name shown on the board and your country, and we will delete them.</p>
       <p>Usage and crash reports are kept by Google under the retention settings of our Firebase project. Advertising data is kept by Google under its own policies. To ask about or delete anything we hold, email connect@204labs.com and we will reply within 30 days.</p>
 
       <h2>Your rights</h2>
       <p>Depending on where you live (for example under the GDPR in Europe or the CCPA in California), you may have the right to access, correct or delete your personal information, and to object to or limit its use for advertising. We do not sell your personal information. To use any of these rights, email connect@204labs.com.</p>
 
       <h2>Security</h2>
-      <p>The game sends nothing to our own servers. Purchases, ads, cloud save and usage and crash reports use Google's services, which encrypt data in transit.</p>
+      <p>The game has no servers of its own. The leaderboards, purchases, ads, cloud save and usage and crash reports use Google's services, which encrypt data in transit.</p>
 
       <h2>Changes to this policy</h2>
       <p>If we change this policy, we will post the new version on this page and update the date at the top. Significant changes will also be noted in the game's update notes.</p>
