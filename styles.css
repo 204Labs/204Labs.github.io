@@ -439,3 +439,29 @@ html[data-theme=dark] .theme-toggle .icon-sun{display:block}
 .not-found{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:28px;padding-block:60px}
 .not-found h1{font-size:clamp(3rem,7vw,6rem)}
 .not-found-links{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;max-width:none}
+
+/* Footer: both companies side by side, social icons, product footers (November 2026) */
+.footer-social{display:flex;flex-wrap:wrap;gap:0;margin-left:-12px}
+.footer-social a{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px}
+.footer-social a:hover{background:var(--line)}
+.footer-social svg{width:20px;height:20px;fill:currentColor}
+.entity-footer .footer-social,.policy-footer .footer-social{gap:0;flex-wrap:nowrap}
+.site-footer .footer-social{margin-top:4px}
+.site-footer .footer-social+.copyright{margin-top:4px}
+@media(min-width:761px){.site-footer{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr)}}
+.site-footer>.legal{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));justify-content:center;gap:12px 40px}
+.site-footer>.legal p{margin:0}
+@media(max-width:760px){.site-footer>.legal{grid-column:1 / -1;grid-row:2;max-width:none;justify-content:start;gap:12px 28px}.footer-links{grid-row:1}}
+.footer-group{display:grid;gap:10px;min-width:0}
+.footer-entities{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:8px 48px}
+.footer-entities p{margin:0;line-height:1.7}
+.footer-entities span{font-size:.75rem}
+.footer-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px}
+.footer-meta p{margin:0;font-size:.75rem}
+.product-footer{align-items:center}
+.product-footer-mark{display:grid;gap:4px}
+.product-footer-mark p{margin:0}
+.product-footer-mark p+p{font-size:.75rem}
+.product-footer-mark a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:420px){.footer-entities{gap:8px 20px}}
+@media(min-width:761px) and (max-width:980px){.site-footer{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.footer-identity{grid-column:1;grid-row:1}.footer-links{grid-column:2;grid-row:1}.site-footer>.legal{grid-column:1 / -1;grid-row:2;text-align:left;justify-content:start;margin:0}}

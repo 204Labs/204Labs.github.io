@@ -76,6 +76,16 @@
           "bAIsect turns your messy problem into a structured issue report, then helps connect you with engineers equipped to diagnose, fix, finish or improve the work."
         ]
       }
+    ],
+    "legal": [
+      {
+        "label": "bAIsect Privacy",
+        "url": "https://www.baisect.com/privacy/"
+      },
+      {
+        "label": "bAIsect Terms",
+        "url": "https://www.baisect.com/terms/"
+      }
     ]
   },
   {
@@ -195,6 +205,12 @@
         "body": [
           "Paper Run has no account of its own, and progress is saved on the player's phone, with an optional copy in the player's own Google Play Games account. The Paper Run privacy policy explains how ads, purchases and usage reports handle data."
         ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Paper Run Privacy",
+        "url": "/paper-run/privacy/"
       }
     ]
   }
